@@ -2,28 +2,45 @@ import React, { useState } from "react";
 import { Button, Col, Container, Form, Image, Row,  } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "./../assets/img/eautogen_white.svg";
-
+import { useMutation } from "@apollo/client";
+import { SIGNUP } from "./../mutations/userMutations";
 import { useForm } from "../utils/hooks";
 import {ToastContainer, toast } from "react-toastify";
 import values_that_lead_us from "./../assets/img/values_that_lead_us.png";
 import "react-toastify/dist/ReactToastify.css";
 function Signup() {
-
+  const [errors, setErrors] = useState({});
     const { onChange, onSubmit, values } = useForm(handleSubmit, {
         email: "",
         mobile: "",
         
-        fullName: "",
+        name: "",
         
       });
   
     // const [validated, setValidated] = useState(false);
     const navigate = useNavigate();
 
+    const [addUser, { loading }] = useMutation(SIGNUP, {
+      update(_, { data: { registerUser: userData } }) {
+        console.log("signup result ", userData);
+        if (userData) {
+         toast("User Created Successfully");
+        }
+        setTimeout(() => {
+          navigate("/login");
+        }, 1000);
+      },
+      onError(err) {
+        setErrors(err);
+        toast(err.message);
+      },
+      variables: values,
+    });
 
     function handleSubmit () {
        console.log("hello")
-    if(!values.email  || !values.fullName  
+    if(!values.email  || !values.name  
         || !values.mobile)  
        {
         
@@ -48,10 +65,7 @@ function Signup() {
            toast("Please Enter Valid Mobile Number")
            return;
         }
-        else 
-        {
-            navigate("/login");
-        }
+       addUser();
     };
   return (
     <>
@@ -96,9 +110,9 @@ function Signup() {
                   </Form.Label>
                   <Form.Control 
                   type="text"
-                    name="fullName"
+                    name="name"
                 required="required"
-                value={values.fullName}
+                value={values.name}
                 onChange={onChange}
                    placeholder="e.g. 0123456789"   />
                 </Form.Group>

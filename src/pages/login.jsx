@@ -5,14 +5,33 @@ import Logo from "./../assets/img/eautogen_white.svg";
 import values_that_lead_us from "./../assets/img/values_that_lead_us.png";
 import {ToastContainer, toast } from "react-toastify";
 import { useForm } from "../utils/hooks";
+import { useMutation } from "@apollo/client";
+import { LOGIN} from "./../mutations/userMutations";
 
 function Login() {
+  const [errors, setErrors] = useState({});
     const { onChange, onSubmit, values } = useForm(handleSubmit, {
         email: "",
       });
   let navigate = useNavigate(); 
   
   const [validated, setValidated] = useState(false);
+
+  const [loginUser, { loading }] = useMutation(LOGIN, {
+    update(_, { data: { validateUser: userData } }) {
+      if (userData.token !== "") {
+        toast("Email Verifieded Successfully");
+        navigate("/login/otp");
+      }
+      
+    },
+    onError(err) {
+      setErrors(err);
+      toast(err.message);
+    },
+    variables: values,
+  });
+
 
   function handleSubmit () {
     if(values.email.includes('@')===false )  
@@ -22,6 +41,7 @@ function Login() {
     }
     else
     {
+      loginUser();
         navigate("/login/otp");
     } 
   };

@@ -3,28 +3,60 @@ import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "./../assets/img/eautogen_white.svg";
 import values_that_lead_us from "./../assets/img/values_that_lead_us.png";
-
-
+import { useMutation } from "@apollo/client";
+import { USER_OTP} from "./../mutations/userMutations";
+import { useForm } from "../utils/hooks";
+import {ToastContainer, toast } from "react-toastify";
 
 function OTP() {
     let navigate = useNavigate(); 
+
+    const [errors, setErrors] = useState({});
+    const { onChange, onSubmit, values } = useForm(handleSubmit, {
+       otp: "",
+       email:"jiteshkumar872001@gmail.com",
+        
+      });
+
+
+      const [otpUser, { loading }] = useMutation(USER_OTP, {
+        
+        update(_, { data: { verifyOtp: userData } }) {
+          
+          console.log(userData);
+          if (userData.token !== null) {
+            toast("Login Successful");
+           navigate("/")
+          }
+          else
+          {
+            toast("Invalid OTP");
+          }
+          
+        },
+       
+        variables: values,
+      });
+    
   
-    const [validated, setValidated] = useState(false);
-  
-    const handleSubmit = (event) => {
-      const form = event.currentTarget;
-      if (form.checkValidity() === false) {
-        event.preventDefault();
-        event.stopPropagation();
+   
+    function handleSubmit () {
+      if(values.otp.length!==6)  
+      {
+        toast("Please Enter Valid OTP")
+        return;
       }
-      else{     
-        navigate('/');
-    }
-  
-      setValidated(true);
+      else
+      {
+        otpUser();
+         
+      }
+      
+     
     };
   return (
     <section className="authentication">
+    <ToastContainer/>
       <Container fluid className="ps-0">
         <Row className="align-items-center">
           <Col md={6}>
@@ -50,7 +82,7 @@ function OTP() {
             <div className="authentication-box">
                 <div className="authentication-inputs" >
               <h1>Check your email</h1>
-              <p>We’ve sent you OTP code to your email.</p> <Form noValidate validated={validated} onSubmit={handleSubmit}>
+              <p>We’ve sent you OTP code to your email.</p> <Form  >
               <Form.Group
                 className="mb-3"
                 controlId="exampleForm.ControlTextarea1"
@@ -58,10 +90,14 @@ function OTP() {
                 <Form.Label>
                 OTP Code <span className="text-danger">*</span>{" "}
                 </Form.Label>
-                <Form.Control type="text" placeholder="e.g. 0123456789" required  />
+                <Form.Control type="number"
+                name="otp"
+                onChange={onChange}
+                value={(values.otp)}
+                 placeholder="e.g. 0123456789" required  />
               </Form.Group>{" "}
               <div className="d-grid gap-2 mb-3">
-                <Button variant="secondary" size="lg" type="submit">
+                <Button variant="secondary" size="lg" type="submit" onClick={onSubmit}>
                 validate
                 </Button>
                 <Link to="/login" className="btn btn-outline-secondary btn-lg"> Back</Link>
