@@ -112,9 +112,10 @@ function Banner() {
                         </Form.Check>
                   </Col>
                   <Col md={8} className="d-flex m-auto">
-                    <Button variant="primary" className=" text-center m-auto">GET QUOTE</Button>
+                    {/* <Button variant="primary" className=" text-center m-auto">GET QUOTE</Button> */}
+                    <a className=" text-center m-auto" style={{textDecoration:"none"}} href="/quotation"><Button variant="primary" >GET QUOTE</Button></a>
                   </Col>
-                </Row>
+                </Row>  
               </Form>
             </div>
           </Row>

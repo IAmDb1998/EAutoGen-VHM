@@ -9,10 +9,10 @@ import Homepage from './pages/home';
 import Quotation from './pages/Quotation';
 import PayPage from './pages/pay';
 import Checkoutpage from './pages/checkoutpage';
+import CheckoutUnsuccessPage from './pages/checkoutunsuccesspage';
 import Login from './pages/login';
 import OTP from './pages/otp';
 import Signup from './pages/signup';
-
 function App() {
   return (
     <div className="App">
@@ -22,14 +22,10 @@ function App() {
       <Route path="/quotation" element={<Quotation />} />
       <Route path="/pay" element={<PayPage />} />
       <Route path="/checkout" element={<Checkoutpage />} />
+      <Route path="/checkoutfail" element={<CheckoutUnsuccessPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/login/otp" element={<OTP />} />
       <Route path="/signup" element={<Signup />} />
-
-
-      
-
-
 
 
       {/* <Route path="expenses" element={<Expenses />} />

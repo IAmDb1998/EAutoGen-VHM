@@ -12,14 +12,14 @@ function HowItWork() {
           <Row>
             <Col md={12}>
               <div className="section-title">
-                <span>EXTENDED CARE FOR YOU & YOUR CAR</span>
+                <span>HOW IT WORKS</span>
                 <h2>
-                  <span>HOW IT WORKS</span>{" "}
+                  <span>WHAT'S NEXT</span>{" "}
                 </h2>
               </div>
             </Col>
             </Row>
-            <Row className="align-items-center">
+            <Row className="align-items-center justify-content-center">
             <Col md={3}>
                 <Image src={autohgenplus} fluid/>
                 <strong className="pb-2 d-flex">Get a Quote & Purchase Plan</strong>

@@ -7,7 +7,7 @@ function CheckoutboxUnsuccessful() {
       <Row>
         <Col md={12}>
           <div className="section-title mb-5">
-            <span>get covered by autogen PLUS</span>
+            <span>GER COVERD BY AUTOGEN PLUS</span>
             <h2>
               <span>PAYMENT UNSUCCESSFUL</span>
             </h2>

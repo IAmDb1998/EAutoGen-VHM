@@ -3,28 +3,31 @@ import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "./../assets/img/eautogen_white.svg";
 import values_that_lead_us from "./../assets/img/values_that_lead_us.png";
-
-
+import {ToastContainer, toast } from "react-toastify";
+import { useForm } from "../utils/hooks";
 
 function Login() {
+    const { onChange, onSubmit, values } = useForm(handleSubmit, {
+        email: "",
+      });
   let navigate = useNavigate(); 
   
   const [validated, setValidated] = useState(false);
 
-  const handleSubmit = (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
+  function handleSubmit () {
+    if(values.email.includes('@')===false )  
+    {
+      toast("Please Enter Valid Email")
+      return;
     }
-    else{     
-      navigate('/login/otp');
-  }
-
-    setValidated(true);
+    else
+    {
+        navigate("/login/otp");
+    } 
   };
   return (
     <section className="authentication">
+    <ToastContainer/>
       <Container fluid className="ps-0">
         <Row className="align-items-center">
           <Col md={6}>
@@ -51,7 +54,7 @@ function Login() {
                 <div className="authentication-inputs">
               <h1>Welcome to eAutoGen Capital</h1>
               <p>Login with your email to get started.</p>
-              <Form noValidate validated={validated} onSubmit={handleSubmit}>
+              <Form noValidate validated={validated} onSubmit={onSubmit}>
               <Form.Group
                 className="mb-3"
                 controlId="exampleForm.ControlTextarea1"
@@ -59,7 +62,12 @@ function Login() {
                 <Form.Label>
                   Email <span className="text-danger">*</span>{" "}
                 </Form.Label>
-                <Form.Control type="email" placeholder="e.g. 0123456789" required  />
+                <Form.Control type="email" 
+                 name="email"
+                required="required"
+                value={values.email}
+                onChange={onChange}
+                placeholder="e.g. 0123456789"   />
               </Form.Group>{" "}
               <div className="d-grid gap-2 mb-3">
                 <Button variant="secondary" size="lg" type="submit">

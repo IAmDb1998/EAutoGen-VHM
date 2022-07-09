@@ -9,7 +9,7 @@ function Checkoutpage() {
     return ( <>
     <HeaderInnner/>
     <Checkoutbox/>
-<CheckoutboxUnsuccessful/>
+{/* <CheckoutboxUnsuccessful/> */}
     <HowItWork/>
     <AuthorizedWorkshops/>
     <Footer/>
