@@ -1,9 +1,11 @@
+
 header .navbar {
-    background-color: rgba(0, 0, 0, 0.2);
+    /* background-color: rgba(0, 0, 0, 0.2); */
 }
 header .navbar-brand img{
-    height: 50px;
+    height: 40px;
 }
+
 header .navbar-light .navbar-nav .nav-link{
     font-weight: 700;
     font-style: normal;
@@ -19,14 +21,22 @@ header .login{
     --head-indent: 0;
     --numeric-list-marker: none;
     list-style-type: none;
+    display: flex;
 }
 header .login i{
     font-size: 24px;
+
 }
 header .login a{
     color: #fff;
     padding:0  5px ;
     font-size: 19.4649px;
+}
+.btn-check:focus+.btn, .btn:focus{
+    box-shadow: none;
+}
+.dropdown-toggle::after{
+    color: white;
 }
 .banner {
     background-image: url(../img/banner_bg.png);
@@ -139,6 +149,7 @@ header .login a{
 .autogen p{
     color: #fff;
     font-size: 12px;
+
 }
 .autogen .icon-box img{
     max-height: 82px;
@@ -157,7 +168,7 @@ header .login a{
     right: 0px;
     bottom: 50px;
     max-height: 750px;
-    width: auto;
+    width: 50%;
     z-index: 9;
 }
 .how_work{
@@ -284,7 +295,7 @@ footer .footer-bottom p{
 }
 .authentication-content{
     background-image: url(../img//banner_bg.png);
-    height: 100vh;
+    height: 180vh;
     width: 100%;
     background-size: cover;
     background-position: right;
@@ -317,6 +328,7 @@ footer .footer-bottom p{
     height: 100vh;
     display: flex;
     align-items: center;
+    margin-top: 90px;
 }
 .authentication-box .authentication-inputs{
     width: 100%;
@@ -335,7 +347,7 @@ footer .footer-bottom p{
     max-width: 370px;
     margin: 0 auto;
     position: absolute;
-    bottom: 0;
+    bottom: -250px;
     left: 0;
     right: 0;
 }
@@ -356,3 +368,28 @@ footer .footer-bottom p{
     background-color: #29989a;
     border-color: #29989a;
 }
+
+
+
+
+/* mobile view */
+@media screen and (min-width: 320px) and (max-width: 480px){
+    header .navbar-brand img {
+        height: 40px;
+    }
+    .banner .banner-content h1{
+        font-size: calc(20px);
+        margin: 0 auto;
+    }
+    header .login{
+        /* display: block; */
+    }
+    .banner{
+        background-position:right;
+    }
+    .autogen .section-img{
+        display: none;
+    }
+}
+
+

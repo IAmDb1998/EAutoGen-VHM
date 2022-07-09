@@ -26,7 +26,7 @@ function OTP() {
           console.log(userData);
           if (userData.token !== null) {
             toast("Login Successful");
-           navigate("/")
+           navigate("/admin/buyplan")
           }
           else
           {
@@ -107,7 +107,7 @@ function OTP() {
               </p>
               </div>
           
-              <Image src={values_that_lead_us} fluid/>
+              <Image src={values_that_lead_us} fluid width="50%" height="50%"/>
             </div>
           
           </Col>
