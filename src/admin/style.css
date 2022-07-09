@@ -1,0 +1,94 @@
+.header-admin .navbar{
+    background-color: #fff;
+    border-bottom:1px solid #707070;
+}
+.header-admin .navbar-light .navbar-nav .nav-link{
+    color: #000000;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 25px;
+    position: relative;
+}
+.header-admin .navbar-light .navbar-nav .nav-link.active::after{
+    content: '';
+    background-color: #10618C;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.header-admin .login, header.header-admin .login a{
+    color: #000000;
+}
+.Wizard-navigation{
+    -webkit-box-shadow: 3px 0px 20px 0px rgba(0,0,0,0.05);
+-moz-box-shadow: 3px 0px 20px 0px rgba(0,0,0,0.05);
+box-shadow: 3px 0px 20px 0px rgba(0,0,0,0.05);
+background-color: #fff;
+padding: 30px;
+margin-top: 30px;
+border-radius: 15px;
+height: 702px;
+position: relative;
+}
+.Wizard-navigation::after{
+    content: '';
+    background-image: url(../assets/img/lady_in_car.png);
+    max-width: 263px;
+    max-height: 380px;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-size: cover;
+}
+.Wizard-navigation ul{
+    padding: 0;
+    list-style: none;
+}
+.Wizard-navigation ul li a{
+    text-decoration: none;
+    color: #000000;
+}
+.Wizard-navigation ul li .nav-box{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.Wizard-navigation ul li .nav-box img{
+    max-width: 65px;
+}
+.Wizard-navigation ul li .nav-box .nav-content{
+    padding-left: 30px;
+}
+.Wizard-navigation ul li .nav-box .nav-content h5{
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.Wizard-navigation ul li .nav-box .nav-content p{
+    margin-bottom: 0;
+}
+.Wizard-navigation ul li .nav-box .icon-box{
+    border: #0C4C82 3px solid;
+    border-radius: 15px;
+    color: #22BBB9;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+.Wizard-navigation ul li a{
+    opacity: 50%;
+}
+.Wizard-navigation ul li a.active{
+    opacity: 1;
+}
+.authentication-box{
+    height: auto;
+    padding:0 100px;
+}
