@@ -12,8 +12,6 @@ function Login() {
   const [errors, setErrors] = useState({});
     const { onChange, onSubmit, values } = useForm(handleSubmit, {
         email: "",
-       
-        
       });
   let navigate = useNavigate(); 
   
@@ -45,8 +43,7 @@ function Login() {
     {
       loginUser();
         navigate("/login/otp");
-    }
-    
+    } 
   };
   return (
     <section className="authentication">
