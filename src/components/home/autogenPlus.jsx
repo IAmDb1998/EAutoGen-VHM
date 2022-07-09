@@ -60,7 +60,7 @@ function AutogenPlus() {
               </p>
             </Col>
           </Row>
-          <Row>
+          <Row >
             <Col md={6}>
                 <strong className="pb-3 d-flex">AutoGen Plus is an extended warranty program that aid car owners from unexpected car engine and transmission repair cost. </strong>
                 <strong className="pb-3 d-flex">We aim to improve car owners’ well-being by providing affordable extended warranty program with easily accessible workshops, and recognized quality of workmanship for all auto generation:</strong>
