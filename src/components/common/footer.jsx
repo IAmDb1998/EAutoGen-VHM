@@ -25,7 +25,7 @@ function Footer() {
             </p>
           </Col>
           <Col md={2}>
-            <strong className="pb-2 d-flex">Explore</strong>
+            {/* <strong className="pb-2 d-flex">Explore</strong>
             <ul>
               <li>
                 <NavLink to="">Home</NavLink>
@@ -39,7 +39,7 @@ function Footer() {
               <li>
                 <NavLink to="">Sitemap</NavLink>
               </li>
-            </ul>
+            </ul> */}
           </Col>
           <Col md={2}>
             <strong className="pb-2 d-flex">AUTOGEN Plus</strong>

@@ -49,7 +49,7 @@ function Login() {
     <section className="authentication">
     <ToastContainer/>
       <Container fluid className="ps-0">
-        <Row className="align-items-center">
+        <Row className="">
           <Col md={6}>
             <div className="authentication-content">
               <div className="logo">
@@ -99,7 +99,7 @@ function Login() {
                 Don’t have an account?<Link to="/signup"> Sign Up</Link>
               </p>
               </div>
-              <Image src={values_that_lead_us} fluid/>
+              <Image src={values_that_lead_us} fluid width="50%" height="50%"/>
             </div>
           
           </Col>
