@@ -356,3 +356,6 @@ footer .footer-bottom p{
     background-color: #29989a;
     border-color: #29989a;
 }
+.btn{
+    border-radius: 0;
+}

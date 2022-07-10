@@ -6,14 +6,7 @@ import Navigation from "./Navigation";
 function CustomerDetails() {
   return (
     <> 
-    <Header/>
-      <Container>
-        <Row className="align-items-center">
-          <Col md={4}>
-            <Navigation />
-          </Col>
-          <Col md={8}>
-            <div className="authentication-box">
+      <div className="payment-box">
               <div className="authentication-inputs">
                 <h1>Customer Details</h1>
                 <p className="mb-3">Input customer information</p>
@@ -24,7 +17,7 @@ function CustomerDetails() {
                     controlId="exampleForm.ControlTextarea1"
                   >
                     <Form.Label>
-                      Name <span className="text-danger">*</span>{" "}
+                      Name  <span className="text-danger">*</span>{" "}
                     </Form.Label>
                     <Form.Control
                       type="text"
@@ -52,7 +45,7 @@ function CustomerDetails() {
                     controlId="exampleForm.ControlTextarea1"
                   >
                     <Form.Label>
-                    Phone Number *  <span className="text-danger">*</span>{" "}
+                    Phone Number <span className="text-danger">*</span>{" "}
                     </Form.Label>
                     <Form.Control
                       type="text"
@@ -66,7 +59,7 @@ function CustomerDetails() {
                     controlId="exampleForm.ControlTextarea1"
                   >
                     <Form.Label>
-                    NRIC Number *  <span className="text-danger">*</span>{" "}
+                    NRIC Number <span className="text-danger">*</span>{" "}
                     </Form.Label>
                     <Form.Control
                       type="text"
@@ -88,9 +81,6 @@ function CustomerDetails() {
                 </Form>
               </div>
             </div>
-          </Col>
-        </Row>
-      </Container>
     </>
   );
 }

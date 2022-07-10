@@ -10,7 +10,7 @@ function Navigation() {
       <div className="Wizard-navigation">
         <ul>
           <li>
-            <NavLink to="/admin/buyplan">
+            <NavLink to="cardetails">
               <div className="nav-box">
                 <Image src={car_inspection_icon} />
                 <div className="nav-content">
@@ -21,7 +21,7 @@ function Navigation() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/admin/customerdetails">
+            <NavLink to="customerdetails">
               <div className="nav-box">
                 <Image src={autogen_icon} />
                 <div className="nav-content">
@@ -32,7 +32,7 @@ function Navigation() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/admin/planquotation">
+            <NavLink to="planquotation">
               <div className="nav-box">
                 <Image src={autohgenplus} />
                 <div className="nav-content">
@@ -43,7 +43,7 @@ function Navigation() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/admin/planpayment">
+            <NavLink to="planpayment">
               <div className="nav-box">
                 <div className="icon-box">
               <i class="fa-solid fa-check"></i>

@@ -88,7 +88,53 @@ position: relative;
 .Wizard-navigation ul li a.active{
     opacity: 1;
 }
-.authentication-box{
-    height: auto;
+.payment-box{
+    margin-top: 30px;
     padding:0 100px;
+}
+.payment-box h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+.ipay{
+    max-height: 34px;
+}
+.quot{
+    padding: 25px 0;
+}
+.payment-box .nav-tabs .nav-link.active{
+    color: #fff;
+    background-color: #32BEC0;
+    border-color: #32BEC0;
+}
+.payment-box .nav-tabs .nav-link{
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 0;
+    font-weight: 700;
+    font-size: 18px;
+}
+.payment-box .nav-tabs{
+    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+.payment-box .list-group-item{
+    border: 1px solid #CED4DA;
+    transition: all 0.5s;
+    margin-bottom: 15px;
+}
+.payment-box .list-group-item:hover{
+    border-color:#F05A28 ;
+}
+.list-group-item label{
+    display: flex;
+    align-items: center;
+}
+.list-group-item label img{
+    margin-right: 15px;
+}
+.list-group-item .form-check-input:checked{
+    background-color: #F05A28;
+    border-color: #F05A28;
 }
