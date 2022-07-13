@@ -138,3 +138,89 @@ position: relative;
     background-color: #F05A28;
     border-color: #F05A28;
 }
+.home-nav {
+    background: -webkit-linear-gradient(left, rgb(12, 78, 131) 0%, rgb(21, 121, 152) 40%, rgb(29, 164, 173) 80%, rgb(34, 185, 184) 100%);
+    padding: 25px 0;
+}
+.home-nav .navbar{
+    background-color: transparent;
+}
+.home-nav .navbar a.nav-link{
+    padding: 0 25px;
+    color: rgba(255,255,255,0.5);
+}
+.home-nav .navbar a.nav-link.active{
+    position: relative;
+    color: #fff;
+}
+.home-nav .navbar a.nav-link.active::after{
+    content: '';
+    background-color: #fff;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+}
+.overview-box{
+    border: 1px solid #E4E8EB;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.overview-box .overview-item{
+    margin-top: 20px;
+    border: 1px solid #E4E8EB;
+    height: 206px;
+    border-radius: 5px;
+    background-color: #F3F3F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+.overview-box .overview-item h1{
+    font-weight: 700;
+    font-size: 30px;
+}
+.overview-box .overview-item span{
+    font-size: 16px;
+}
+.overview-box .overview-item p{
+    font-size: 16px;
+    color: #000000;
+}
+.overview-box .overview-item .expired h1, .overview-box .overview-item .expired span{
+    color: #DF5C5C;
+}
+.overview-box .overview-item .unpaid h1, .overview-box .overview-item .unpaid span{
+    color: #426AF7;
+}
+.overview-box .overview-item .paid h1, .overview-box .overview-item .paid span{
+    color: #1E9A8B;
+}
+.overview-box .overview-item .draft h1, .overview-box .overview-item .draft span{
+    color: #9B9B9B;
+}
+.dashbord-box{
+    background-color: #F3F3F3;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.carousel-indicators [data-bs-target]{
+    background-color: #7E7E7E;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    border: none;
+}
+.carousel-indicators .active{
+    background-color: #32BEC0;
+    width: 16px;
+    height: 6px;
+    border-radius: 50px;
+}
+.carousel-indicators{
+    bottom: -25px;
+}
