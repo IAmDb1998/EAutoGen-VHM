@@ -169,11 +169,14 @@ header .login a {
 }
 .autogen .section-img {
   position: absolute;
-  right: 0px;
+  right: 0;
   bottom: 50px;
   max-height: 750px;
   width: 50%;
+  object-fit: contain;
   z-index: 9;
+  object-position: right;
+  padding: 0;
 }
 .how_work {
   box-shadow: 0 2px 8px rgb(14 19 24 / 7%);
