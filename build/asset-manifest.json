@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.10b72340.css",
-    "main.js": "./static/js/main.b71e57da.js",
-    "static/js/787.c1112931.chunk.js": "./static/js/787.c1112931.chunk.js",
+    "main.css": "./static/css/main.e217a23e.css",
+    "main.js": "./static/js/main.32854218.js",
     "static/media/lady_in_car.png": "./static/media/lady_in_car.8d905ff3c812f15b49ad.png",
     "static/media/locate_us_bg.png": "./static/media/locate_us_bg.16c47199ce62b73a517b.png",
     "static/media/car_logo.png": "./static/media/car_logo.3bf307e9e9b5256181f0.png",
     "static/media/woman_with_bill.png": "./static/media/woman_with_bill.2345dfe0b5e140b552c1.png",
     "static/media/car_wireframe.png": "./static/media/car_wireframe.1b6a5eda99f1e3b6e3ab.png",
     "static/media/4_step_claims.png": "./static/media/4_step_claims.d41d3c16eb350f35d9a2.png",
+    "static/media/MaskGroup2.png": "./static/media/MaskGroup2.9b7abb7a741372fa684e.png",
+    "static/media/MaskGroup1.png": "./static/media/MaskGroup1.03af59e9de96b4dde6f3.png",
     "static/media/covered.png": "./static/media/covered.3917b2375f67ed3e8d3d.png",
     "static/media/values_that_lead_us.png": "./static/media/values_that_lead_us.c6dd43e2540ee0f45ea0.png",
     "static/media/404_error.png": "./static/media/404_error.0ba344a736a6ce7964ca.png",
@@ -27,16 +28,15 @@
     "static/media/eautogen_product.png": "./static/media/eautogen_product.99be1ab5d808d6fd8bfc.png",
     "static/media/eautogen_flaticon.png": "./static/media/eautogen_flaticon.6bbbcfe4966d7d76efdb.png",
     "static/media/horizontal_gradient_background.png": "./static/media/horizontal_gradient_background.42ebcbdf87eb43137282.png",
-    "static/media/eautogen_white.svg": "./static/media/eautogen_white.eafa6ae66bc976fb63745edd1b85934c.svg",
+    "static/media/eautogen_white.svg": "./static/media/eautogen_white.fded68e5dd5fee7c207cc7bc2be6a96b.svg",
     "static/media/eutogen_logo.svg": "./static/media/eutogen_logo.0f7db791b7e956a67f0e12f02102bc58.svg",
     "index.html": "./index.html",
     "static/media/arrow.svg": "./static/media/arrow.1c65293fadfa821a1f1174a41b7c03df.svg",
-    "main.10b72340.css.map": "./static/css/main.10b72340.css.map",
-    "main.b71e57da.js.map": "./static/js/main.b71e57da.js.map",
-    "787.c1112931.chunk.js.map": "./static/js/787.c1112931.chunk.js.map"
+    "main.e217a23e.css.map": "./static/css/main.e217a23e.css.map",
+    "main.32854218.js.map": "./static/js/main.32854218.js.map"
   },
   "entrypoints": [
-    "static/css/main.10b72340.css",
-    "static/js/main.b71e57da.js"
+    "static/css/main.e217a23e.css",
+    "static/js/main.32854218.js"
   ]
 }

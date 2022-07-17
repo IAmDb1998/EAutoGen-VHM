@@ -7,6 +7,7 @@ import hassle_free_process_white from "./../../assets/img/hassle_free_process_wh
 import lady_in_car from "./../../assets/img/lady_in_car.png";
 
 function AutogenPlus() {
+  
   return (
     <>
       <section className="autogen py-5">
@@ -119,7 +120,7 @@ function AutogenPlus() {
             </Col>
             <Image src={lady_in_car} className="section-img" />
             <Col md={8} className="d-flex m-auto">
-              <Button variant="primary" className=" text-center m-auto">
+              <Button variant="primary" onClick={() => window.scrollTo(0, window.innerHeight)} className=" text-center m-auto">
                 GET QUOTE
               </Button>
             </Col>

@@ -8,13 +8,13 @@ function Package() {
         <Row>
           <Col md={12}>
             <div className="section-title">
-              <span>get covered by autogen+</span>
+              <span>GET COVERED BY AUTOGEN+</span>
               <h2>
                 <span>1 Year Warranty Package</span>
               </h2>
             </div>{" "}
             <div className="section-title d-flex align-items-end justify-content-center">
-              <h2 className="mb-0 ">RM 298.00</h2>
+              <h2 className="mb-0 ">RM <span>{localStorage.getItem("owner_price")}</span>.00</h2>
               <h5>/YEAR</h5>
             </div>
           </Col>
@@ -27,25 +27,25 @@ function Package() {
                   <strong>Owner Name: </strong>
                 </Col>
                 <Col md={8}>
-                  <p>Name</p>
+                  <p>{localStorage.getItem("owner_name")}</p>
                 </Col>
                 <Col md={4}>
                   <strong>Brand: </strong>
                 </Col>
                 <Col md={8}>
-                  <p>Name</p>
+                  <p>{localStorage.getItem("owner_brand")}</p>
                 </Col>
                 <Col md={4}>
                   <strong>Year Make:</strong>
                 </Col>
                 <Col md={8}>
-                  <p>Name</p>
+                  <p>{localStorage.getItem("owner_year")}</p>
                 </Col>
                 <Col md={4}>
                   <strong>Other input:</strong>
                 </Col>
                 <Col md={8}>
-                  <p>Name</p>
+                  <p>{localStorage.getItem("owner_model")}</p>
                 </Col>
               </Row>
             </div>

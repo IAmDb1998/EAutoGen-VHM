@@ -1,12 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "../common/header";
 import Navigation from "./Navigation";
+import { useMutation } from "@apollo/client";
+import { CUSTO_DETAILS } from "../../../mutations/userMutations";
+import { useForm } from "../../../utils/hooks";
+import { ToastContainer, toast } from "react-toastify";
 function CustomerDetails() {
+  const navigate = useNavigate();
+  const [errors, setErrors] = useState({});
+  const { onChange, onSubmit, values } = useForm(handleSubmit, {
+    name: "",
+    email: "",
+    mobile: "",
+    nric: "",
+    state: "",
+  });
+
+  const [addUser, { loading }] = useMutation(CUSTO_DETAILS, {
+    update(_, { data: { customerDetails: userData } }) {
+      console.log("signup result ", userData);
+      localStorage.setItem("owner_name", userData.name);
+      localStorage.setItem("owner_email", userData.email);
+      localStorage.setItem("owner_mobile", userData.mobile);
+      localStorage.setItem("owner_nric", userData.nric);
+      localStorage.setItem("owner_state", userData.state);
+      // practice
+      setTimeout(() => {
+        navigate("/admin/planquotation");
+      }, 2000);
+    },
+    onError(err) {
+      setErrors(err);
+      toast(err.message);
+    },
+    variables: values,
+  });
+
+  function handleSubmit() {
+    if (!values.email || !values.name || !values.mobile) {
+      toast("Please Fill All The Fields");
+
+      return;
+    } else if (values.email.includes("@") === false) {
+      toast("Please Enter Valid Email");
+      return;
+    } else if (values.mobile.length > 15) {
+      toast("Please Enter Valid Mobile Number");
+      return;
+    } else if (values.mobile.length < 8) {
+      toast("Please Enter Valid Mobile Number");
+      return;
+    }
+    addUser();
+  }
   return (
-    <> 
-    <Header/>
+    <>
+      <ToastContainer />
+      <Header />
       <Container>
         <Row className="align-items-center">
           <Col md={4}>
@@ -28,9 +80,10 @@ function CustomerDetails() {
                     </Form.Label>
                     <Form.Control
                       type="text"
-                      name="text"
+                      name="name"
                       required="required"
-                      placeholder="e.g. name"
+                      value={values.name}
+                      onChange={onChange}
                     />
                   </Form.Group>
                   <Form.Group
@@ -38,13 +91,14 @@ function CustomerDetails() {
                     controlId="exampleForm.ControlTextarea1"
                   >
                     <Form.Label>
-                    Email  <span className="text-danger">*</span>{" "}
+                      Email <span className="text-danger">*</span>{" "}
                     </Form.Label>
                     <Form.Control
                       type="email"
                       name="email"
                       required="required"
-                      placeholder="e.g. abc@dd.com"
+                      value={values.email}
+                      onChange={onChange}
                     />
                   </Form.Group>
                   <Form.Group
@@ -52,13 +106,14 @@ function CustomerDetails() {
                     controlId="exampleForm.ControlTextarea1"
                   >
                     <Form.Label>
-                    Phone Number *  <span className="text-danger">*</span>{" "}
+                      Phone Number * <span className="text-danger">*</span>{" "}
                     </Form.Label>
                     <Form.Control
-                      type="text"
+                      type="number"
                       name="mobile"
                       required="required"
-                      placeholder="e.g. 0123456789"
+                      value={values.mobile}
+                      onChange={onChange}
                     />
                   </Form.Group>
                   <Form.Group
@@ -66,21 +121,29 @@ function CustomerDetails() {
                     controlId="exampleForm.ControlTextarea1"
                   >
                     <Form.Label>
-                    NRIC Number *  <span className="text-danger">*</span>{" "}
+                      NRIC Number * <span className="text-danger">*</span>{" "}
                     </Form.Label>
                     <Form.Control
-                      type="text"
-                      name="mobile"
+                      type="number"
+                      name="nric"
                       required="required"
-                      placeholder="e.g. 0123456789"
+                      value={values.nric}
+                      onChange={onChange}
                     />
                   </Form.Group>
                   <div className="d-flex justify-content-between  mt-5">
-                    <Link to="/admin/buyplan" className="btn btn-outline-secondary btn-md">
+                    <Link
+                      to="/admin/buyplan"
+                      className="btn btn-outline-secondary btn-md"
+                    >
                       {" "}
                       Back
                     </Link>
-                    <Link to="/admin/planquotation" className="btn btn-secondary btn-md">
+                    <Link
+                      to="/admin/planquotation"
+                      className="btn btn-secondary btn-md"
+                      onClick={onSubmit}
+                    >
                       {" "}
                       SAVE & CONTINUE
                     </Link>

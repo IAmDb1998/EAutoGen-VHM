@@ -9,7 +9,7 @@ function CheckoutboxUnsuccessful() {
           <div className="section-title mb-5">
             <span>GER COVERD BY AUTOGEN PLUS</span>
             <h2>
-              <span>PAYMENT UNSUCCESSFUL</span>
+              <span style={{color:"#EF487D"}}>PAYMENT UNSUCCESSFUL</span>
             </h2>
             <p>We encountered on error during your transaction. Please try again with different payment method.</p>
 

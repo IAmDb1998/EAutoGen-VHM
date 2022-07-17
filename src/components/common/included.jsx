@@ -21,7 +21,8 @@ function WhatIncluded() {
         </Row>
         <Row>
           <Col md={6}>
-            <strong className="pb-3 d-flex">
+          <div className="include_auto">
+          <strong className="pb-3 d-flex m-auto">
               Car component(S) covered by AUTOGEN+{" "}
             </strong>
 
@@ -59,6 +60,7 @@ function WhatIncluded() {
               </div>
             </div>
             <p>*Terms & Conditions applies. </p>
+          </div>
           </Col>
           <Image src={lady_in_car} className="section-img" />
           <Col md={8} className="d-flex m-auto">

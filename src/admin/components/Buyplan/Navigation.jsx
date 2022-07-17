@@ -46,7 +46,7 @@ function Navigation() {
             <NavLink to="/admin/planpayment">
               <div className="nav-box">
                 <div className="icon-box">
-              <i class="fa-solid fa-check"></i>
+              <i className="fa-solid fa-check"></i>
               </div>
                 <div className="nav-content">
                     <h5>Completed</h5>

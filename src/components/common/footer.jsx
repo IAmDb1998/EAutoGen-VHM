@@ -17,11 +17,11 @@ function Footer() {
               EAUTOGEN CAPITAL SDN BHD (1402277-K){" "}
             </strong>
             <p>
-              <i class="fa-solid fa-location-dot"></i> D-26-3 Menara Suezcap 1,
+              <i className="fa-solid fa-location-dot"></i> D-26-3 Menara Suezcap 1,
               KL Gateway, <br /> 2, Jalan Kerinchi, 59200 Kuala Lumpur.
             </p>
             <p>
-              <i class="fas fa-envelope"></i> cs@eautogen.my
+              <i className="fas fa-envelope"></i> cs@eautogen.my
             </p>
           </Col>
           <Col md={2}>
@@ -61,9 +61,6 @@ function Footer() {
           <Col md={2}>
             <strong className="pb-2 d-flex">Legal</strong>
             <ul>
-              <li>
-                <NavLink to="">Terms of Use</NavLink>
-              </li>
               <li>
                 <NavLink to="">Terms & Conditions</NavLink>
               </li>

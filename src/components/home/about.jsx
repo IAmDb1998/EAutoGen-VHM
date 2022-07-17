@@ -8,7 +8,7 @@ function Aboutus() {
             <Row>
                 <Col md={12}>
                     <div className='section-title'>
-                        <span>
+                        <span style={{color:"#00000066"}}>
                         About Us
                         </span>
                         <h2>VALUES <span>THAT</span> LEAD <span>US</span>  </h2>

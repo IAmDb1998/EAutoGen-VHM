@@ -19,6 +19,68 @@ const SIGNUP = gql`
   }
 `;
 
+const CUSTO_DETAILS = gql`
+mutation customerDetails(
+  $name: String
+  $email: String
+  $mobile: String
+  $nric: String
+  $state: String
+){
+ customerDetails
+  (
+    name:$name
+  email:$email
+  mobile:$mobile
+  nric:$nric
+  state:$state
+  )
+  {
+    id
+    name
+    email
+    mobile
+    nric
+    state
+  }
+}
+`
+
+const GETQUOTATION = gql`
+mutation createQuotation (
+  $email:String
+  $year:String
+  $userName:String
+  $mobile:String
+  $modelId:ID
+  $brandId:ID
+  ){
+  createQuotation(inputQuote :{
+    email:$email
+    year:$year
+    userName:$userName
+    mobile:$mobile
+    modelId:$modelId
+    brandId:$brandId
+    
+
+  }
+    
+  ){
+    id
+    brandName
+    modelName
+    year
+    userName
+    email
+    mobile
+    price
+    token
+    brandId
+  }
+}
+`;
+
 
 
 
@@ -54,4 +116,4 @@ mutation   verifyOtp(
 
 `
 
-export { LOGIN, SIGNUP ,USER_OTP};
+export { LOGIN, SIGNUP ,USER_OTP,GETQUOTATION,CUSTO_DETAILS};

@@ -1,11 +1,71 @@
-import React from "react";
+import React ,{useState}from "react";
 import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import car_wireframe from "../../assets/img/car_wireframe.png";
 import eautogen_product from "../../assets/img/eautogen_product.png";
-
+import { Link, useNavigate } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import { CUSTO_DETAILS} from "../../mutations/userMutations";
+import { useForm } from "../../utils/hooks";
+import {ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function QuotationPart() {
+     const navigate=useNavigate();
+  const [errors, setErrors] = useState({});
+    const { onChange, onSubmit, values } = useForm(handleSubmit, {
+        name:`${localStorage.getItem("owner_name")}`,
+        email:`${localStorage.getItem("owner_email")}`,
+        mobile:`${localStorage.getItem("owner_mobile")}`,
+        nric:"",
+        state:"",
+        
+      });
+  
+    
+   
+
+    const [addUser, { loading }] = useMutation(CUSTO_DETAILS, {
+      update(_, { data: { customerDetails: userData } }) {
+        console.log("signup result ", userData);
+        if (userData) {
+          navigate("/pay");
+        }
+      },
+     
+      variables: values,
+    });
+
+    function handleSubmit () {
+       console.log("hello")
+    if(!values.email  || !values.name  
+        || !values.mobile  || !values.nric || !values.state) 
+       {
+        
+        
+         toast("Please Fill All The Fields")
+         
+         return;
+       }
+       else if(values.email.includes('@')===false)
+       {
+         toast("Please Enter Valid Email")
+         return;
+       }
+     
+         else if(values.mobile.length>15 )
+         {
+           toast("Please Enter Valid Mobile Number")
+           return;
+         }
+        else if(values.mobile.length<8)
+        {
+           toast("Please Enter Valid Mobile Number")
+           return;
+        }
+       addUser();
+    };
   return (
     <section className="py-5 mt-5">
+    <ToastContainer/>
       <Container>
         <Row>
           <Col md={12}>
@@ -34,19 +94,19 @@ function QuotationPart() {
                   <strong>Owner Name: </strong>
                 </Col>
                 <Col md={8}>
-                  <p>Name</p>
+                  <p>{localStorage.getItem("owner_name")}</p>
                 </Col>
                 <Col md={4}>
                   <strong>Brand: </strong>
                 </Col>
                 <Col md={8}>
-                  <p>Name</p>
+                  <p>{localStorage.getItem("owner_brand")}</p>
                 </Col>
                 <Col md={4}>
                   <strong>Year Make:</strong>
                 </Col>
                 <Col md={8}>
-                  <p>Name</p>
+                  <p>{localStorage.getItem("owner_year")}</p>
                 </Col>
                 <Col md={4}>
                   <strong>Other input:</strong>
@@ -65,7 +125,13 @@ function QuotationPart() {
                     controlId="exampleForm.ControlInput1"
                   >
                     <Form.Label>Name</Form.Label>
-                    <Form.Control type="text" placeholder="e.g. Tan Eng" />
+                    <Form.Control type="text"
+                       
+                    name="name"
+                required="required"
+                value={values.name}
+                onChange={onChange}
+                     placeholder="e.g. Tan Eng" />
                   </Form.Group>
                 </Col>
                 <Col md={6}>
@@ -76,6 +142,11 @@ function QuotationPart() {
                     <Form.Label>Email </Form.Label>
                     <Form.Control
                       type="email"
+                      name="email"
+                   
+                required="required"
+                value={values.email}
+                onChange={onChange}
                       placeholder="e.g. abg@gmail.com"
                     />
                   </Form.Group>
@@ -86,7 +157,13 @@ function QuotationPart() {
                     controlId="exampleForm.ControlTextarea1"
                   >
                     <Form.Label>Mobile </Form.Label>
-                    <Form.Control type="email" placeholder="e.g. 0123456789" />
+                    <Form.Control 
+                       type="number"
+                    name="mobile"
+                required="required"
+                value={values.mobile}
+                onChange={onChange}
+                    placeholder="e.g. 0123456789" />
                   </Form.Group>
                 </Col>
                 <Col md={12}>
@@ -95,7 +172,12 @@ function QuotationPart() {
                     controlId="exampleForm.ControlTextarea1"
                   >
                     <Form.Label>NRIC Number </Form.Label>
-                    <Form.Control type="email" placeholder="e.g. 0123456789" />
+                    <Form.Control type="number"
+                    name="nric"
+                required="required"
+                value={values.nric}
+                onChange={onChange}
+                     placeholder="e.g. 0123456789" />
                   </Form.Group>
                 </Col>
                 <Col md={12}>
@@ -104,7 +186,7 @@ function QuotationPart() {
                     controlId="exampleForm.ControlInput1"
                   >
                     <Form.Label>State</Form.Label>
-                    <Form.Select aria-label="Default select example">
+                    <Form.Select aria-label="Default select example" onChange={onChange} name="state">
                       <option>Open this select menu</option>
                       <option value="01">Johor</option>
     <option value="02">Kedah</option>
@@ -128,18 +210,18 @@ function QuotationPart() {
                 <Col md={12}>
                     <strong>Get covered by AUTOGEN+ for only</strong>
                     <div className="section-title d-flex align-items-end">
-                        <h2 className="mb-0">RM 298.00</h2><h5>/YEAR</h5>
+                        <h2 className="mb-0">RM <span>{localStorage.getItem("owner_price")}</span>.00</h2><h5>/YEAR</h5>
                     </div>
                 </Col>
                 <Col md={12} className="d-flex m-auto">
                   <Form.Check
                       className="mb-3"
-                    > <Form.Check.Input type="checkbox" />
+                    > <Form.Check.Input type="checkbox"  required="required" />
                     <Form.Check.Label>I HEREBY AGREE,,,,</Form.Check.Label>
                         </Form.Check>
                   </Col>
                   <Col md={12}>
-                  <a href="/pay" style={{textDecoration:"none"}}><Button variant="primary" className=" text-center m-auto">BUY NOW</Button></a>
+                  <a style={{textDecoration:"none"}}><Button variant="primary" onClick={onSubmit}  className=" text-center m-auto">BUY NOW</Button></a>
                   </Col>
               </Row>
             </div>

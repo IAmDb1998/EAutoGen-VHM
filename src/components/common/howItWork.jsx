@@ -12,37 +12,37 @@ function HowItWork() {
           <Row>
             <Col md={12}>
               <div className="section-title">
-                <span>HOW IT WORKS</span>
+                <span>EXTENDED CARE FOR YOU & YOUR CAR</span>
                 <h2>
-                  <span>WHAT'S NEXT</span>{" "}
+                  <span>HOW IT WORKS</span>{" "}
                 </h2>
               </div>
             </Col>
             </Row>
             <Row className="align-items-center justify-content-center">
             <Col md={3}>
-                <Image src={autohgenplus} fluid/>
-                <strong className="pb-2 d-flex">Get a Quote & Purchase Plan</strong>
-                <p>Complete form to get a quote for your AutoGen Plus program and purchase plan. An order code will be sent to your registered email within 24-hours.</p>
+                <Image src={autohgenplus} fluid className="hiw_img"/>
+                <strong className="pb-2 d-flex">Purchase Plan</strong>
+                <p>Get started with AUTOGEN PLUS by purchasing and making payment online</p>
             </Col>
             <Col md={1}>
-                <Image src={arrow} fluid/>
+                <Image src={arrow}  className="arrow_img"/>
             </Col>
             <Col md={3}>
-                <Image src={car_inspection_icon} fluid/>
+                <Image src={car_inspection_icon} fluid className="hiw_img"/>
                 <strong className="pb-2 d-flex">Car Inspection</strong>
-                <p>Visit any panel workshops with your order code within 3-months to have your car inspected for AutoGen Plus program activation.</p>
+                <p>Drive to any authorized workshop with your purchased plan to get your car inspected</p>
             </Col>
             <Col md={1}>
-                <Image src={arrow} fluid/>
+                <Image src={arrow}  className="arrow_img"/>
             </Col>
             <Col md={3}>
-                <Image src={autogenplus_logo} fluid/>
+                <Image src={autogenplus_logo} fluid className="hiw_img"/>
                 <strong className="pb-2  d-flex">Get covered by AutoGen Plus</strong>
-                <p>Upon successful activation of AutoGen Plus program, you will receive a certification via email. </p>
+                <p>After the preliminary car inspection, within 24-hours, you will be notified of your plan activation status</p>
             </Col>
             <Col md={12} className="pt-2">
-                <p>Terms & Conditions applies. For all email communication, kindly check your inbox, spam box or junk box. </p>
+                <p style={{color:"#777777"}}>*TERMS & CONDITIONS APPLIES.</p>
             </Col>
           </Row>
         </Container>

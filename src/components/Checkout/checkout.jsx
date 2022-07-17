@@ -8,7 +8,7 @@ function Checkoutbox() {
       <Row>
         <Col md={12}>
           <div className="section-title mb-5">
-            <span>get covered by autogen PLUS</span>
+            <span>GET COVERED BY AUTOGEN+</span>
             <h2>
               <span>PAYMENT SUCCESSFUL</span>
             </h2>
@@ -23,8 +23,7 @@ function Checkoutbox() {
           <div className="quot">
             <Image src={eautogen_product} fluid />
             <p className="mt-5">
-              This is a computer generated quotation, no signature is
-              required.{" "}
+            This is a computer generated receipt, no signature is required. Thank you for purchase of eAutoGen Plus{" "}
             </p>
 
             <Row>
