@@ -10,6 +10,7 @@ import Login from "./pages/login";
 import OTP from "./pages/otp";
 import Signup from "./pages/signup";
 import BuyPlanCar from "./admin/pages/buyplandetails";
+import HomePage from "./admin/pages/home";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
           <Route path="/login/otp" element={<OTP />} />
           <Route path="/signup" element={<Signup />} />
           {/* Admin */}
-          {/* <Route path="/buyplan" element={<BuyPlanCar />}/> */}
+          <Route path="/buyplan" element={<BuyPlanCar />}/>
+          <Route path="/home" element={<HomePage />}/>
           {/* <Route path="expenses" element={<Expenses />} />
       <Route path="invoices" element={<Invoices />} /> */}
         </Routes>

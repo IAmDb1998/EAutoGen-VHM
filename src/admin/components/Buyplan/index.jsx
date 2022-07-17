@@ -1,8 +1,6 @@
 import React from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import Header from "../common/header";
-import Navigation from "./Navigation";
 function CarDetails() {
   return (
     <>

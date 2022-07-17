@@ -1,19 +1,13 @@
 import React from "react";
 import {
-  Button,
-  Card,
   Col,
-  Container,
-  Form,
   Image,
   Row,
   Tab,
   Tabs,
 } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
-import Navigation from "./Navigation";
+import { Link } from "react-router-dom";
 import ipay from "./../../../assets/img/ipay88.png";
-import Header from "../common/header";
 import OnlineBanking from "./Payment/onlinebanking";
 import OtherPayment from "./Payment/other";
 import Cardpage from "./Payment/card";
