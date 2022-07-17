@@ -1,5 +1,5 @@
 header .navbar {
-  /* background-color: rgba(0, 0, 0, 0.2); */
+    /* background-color: rgba(0, 0, 0, 0.2); */
 }
 .desk_logo {
   display: none;
@@ -530,7 +530,16 @@ footer .footer-bottom p {
   width: 85%;
   margin-top: 90px;
 }
+.btn-secondary{
+    background-color: #32BEC0;
+    border-color: #32BEC0;
+    text-transform: uppercase;
 }
+
+.btn-secondary:hover{
+    background-color: #29989a;
+    border-color: #29989a;
+}}
 
 @media screen and (min-device-width: 540px) and (max-device-width: 720px) {
   .desk_logo {
@@ -643,4 +652,23 @@ footer .footer-bottom p {
     font-size: 40px;
     line-height: 40px;
   }
+}
+.btn-outline-secondary:hover{
+    background-color: #29989a;
+    border-color: #29989a;
+}
+.btn{
+    border-radius: 0;
+    transition: all 0.5s;
+}
+.btn-danger{
+    background-color: #DF5C5C;
+    border-color: #DF5C5C;
+}
+.btn-danger:hover{
+    background-color: #c33737;
+    border-color: #c33737;
+}
+.text-danger{
+    color: #DF5C5C;
 }

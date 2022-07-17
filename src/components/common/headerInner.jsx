@@ -5,7 +5,7 @@ import Logo from './../../assets/img/eutogen_logo.svg'
 function HeaderInnner() {
   return (
     <header>
-      <Navbar  expand="lg" style={{ borderBottom:"3px solid black"}} >
+      <Navbar  expand="lg" >
         <Container>
           <Navbar.Brand href="/">
             <Image src={Logo} />

@@ -13,7 +13,7 @@ function Signup() {
   const [errors, setErrors] = useState({});
   const { onChange, onSubmit, values } = useForm(handleSubmit, {
     email: "",
-    mobile: "",
+    mobile: "", 
 
     name: "",
   });

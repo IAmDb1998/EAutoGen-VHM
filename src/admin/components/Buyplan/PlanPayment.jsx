@@ -1,23 +1,14 @@
 import React from "react";
 import { Button, Col, Container, Form, Image, Row ,Tab,Tabs} from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import Navigation from "./Navigation";
 import ipay from "./../../../assets/img/ipay88.png";
-import Header from "../common/header";
 import OnlineBanking from "./Payment/onlinebanking";
 import OtherPayment from "./Payment/other";
 import Cardpage from "./Payment/card";
 function PlanPayment() {
   return (
     <>
-      <Header />
-      <Container>
-        <Row className="align-items-center">
-          <Col md={4}>
-            <Navigation />
-          </Col>
-          <Col md={8}>
-          <div className="payment-box">
+        <div className="payment-box">
         <div className="authentication-inputs">
           <Row className="align-items-center">
             <Col md={8} className="mb-3">
@@ -70,9 +61,6 @@ function PlanPayment() {
           </div>
         </div>
       </div>
-          </Col>
-        </Row>
-      </Container>
     </>
   );
 }

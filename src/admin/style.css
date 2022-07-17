@@ -46,34 +46,34 @@ position: relative;
     right: 0;
     background-size: cover;
 }
-.Wizard-navigation ul{
+.Wizard-navigation {
     padding: 0;
     list-style: none;
 }
-.Wizard-navigation ul li a{
+.Wizard-navigation a{
     text-decoration: none;
     color: #000000;
 }
-.Wizard-navigation ul li .nav-box{
+.Wizard-navigation .nav-box{
     display: flex;
     align-items: center;
     margin-bottom: 15px;
 }
-.Wizard-navigation ul li .nav-box img{
+.Wizard-navigation .nav-box img{
     max-width: 65px;
 }
-.Wizard-navigation ul li .nav-box .nav-content{
+.Wizard-navigation .nav-box .nav-content{
     padding-left: 30px;
 }
-.Wizard-navigation ul li .nav-box .nav-content h5{
+.Wizard-navigation .nav-box .nav-content h5{
     font-weight: 700;
     font-size: 16px;
     margin-bottom: 0;
 }
-.Wizard-navigation ul li .nav-box .nav-content p{
+.Wizard-navigation .nav-box .nav-content p{
     margin-bottom: 0;
 }
-.Wizard-navigation ul li .nav-box .icon-box{
+.Wizard-navigation .nav-box .icon-box{
     border: #0C4C82 3px solid;
     border-radius: 15px;
     color: #22BBB9;
@@ -84,15 +84,89 @@ position: relative;
     justify-content: center;
     font-size: 24px;
 }
-.Wizard-navigation ul li a{
+.Wizard-navigation a{
     opacity: 50%;
 }
-.Wizard-navigation ul li a.active{
+.Wizard-navigation a.active{
     opacity: 1;
 }
-.authentication-box{
-    height: auto;
+.payment-box{
+    margin-top: 30px;
+    padding:0 100px;
+}
+.payment-box h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+.ipay{
+    max-height: 34px;
+}
+.quot{
+    padding: 25px 0;
+}
+.payment-box .nav-tabs .nav-link.active{
+    color: #fff;
+    background-color: #32BEC0;
+    border-color: #32BEC0;
+}
+.payment-box .nav-tabs .nav-link{
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 0;
+    font-weight: 700;
+    font-size: 18px;
+}
+.payment-box .nav-tabs{
+    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+.payment-box .list-group-item{
+    border: 1px solid #CED4DA;
+    transition: all 0.5s;
+    margin-bottom: 15px;
+}
+.payment-box .list-group-item:hover{
+    border-color:#F05A28 ;
+}
+.list-group-item label{
+    display: flex;
+    align-items: center;
+}
+.list-group-item label img{
+    margin-right: 15px;
+}
+.list-group-item .form-check-input:checked{
+    background-color: #F05A28;
+    border-color: #F05A28;
+}
+.home-nav {
+    background: -webkit-linear-gradient(left, rgb(12, 78, 131) 0%, rgb(21, 121, 152) 40%, rgb(29, 164, 173) 80%, rgb(34, 185, 184) 100%);
+    padding: 25px 0;
+}
+.home-nav .nav-item{
+    background-color: transparent;
+}
+.home-nav .nav-item a.nav-link{
+    padding: 0 25px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+}
+.home-nav .nav-item a.nav-link.active{
+    position: relative;
+    color: #fff;
     
+}
+.home-nav .nav-item a.nav-link.active::after{
+    content: '';
+    background-color: #fff;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
 }
 .overview-box{
     border: 1px solid #E4E8EB;
@@ -156,109 +230,44 @@ position: relative;
 .carousel-indicators{
     bottom: -25px;
 }
-.Wizard-navigation{
-    -webkit-box-shadow: 3px 0px 20px 0px rgba(0,0,0,0.05);
--moz-box-shadow: 3px 0px 20px 0px rgba(0,0,0,0.05);
-box-shadow: 3px 0px 20px 0px rgba(0,0,0,0.05);
-background-color: #fff;
-padding: 30px;
-margin-top: 30px;
-border-radius: 15px;
-height: 702px;
-position: relative;
-}
-.Wizard-navigation::after{
-    content: '';
-    background-image: url(../assets/img/lady_in_car.png);
-    max-width: 263px;
-    max-height: 380px;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-size: cover;
-}
-.Wizard-navigation ul{
-    padding: 0;
-    list-style: none;
-}
-.Wizard-navigation ul li a{
-    text-decoration: none;
-    color: #000000;
-}
-.Wizard-navigation ul li .nav-box{
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-.Wizard-navigation ul li .nav-box img{
-    max-width: 65px;
-}
-.Wizard-navigation ul li .nav-box .nav-content{
-    padding-left: 30px;
-}
-.Wizard-navigation ul li .nav-box .nav-content h5{
-    font-weight: 700;
-    font-size: 16px;
-    margin-bottom: 0;
-}
-.Wizard-navigation ul li .nav-box .nav-content p{
-    margin-bottom: 0;
-}
-.Wizard-navigation ul li .nav-box .icon-box{
-    border: #0C4C82 3px solid;
-    border-radius: 15px;
-    color: #22BBB9;
-    width: 58px;
-    height: 58px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-}
-.Wizard-navigation ul li a{
-    opacity: 50%;
-}
-.Wizard-navigation ul li a.active{
-    opacity: 1;
-}
-.payment-box{
-    margin-top: 30px;
-    padding:0 100px;
-}
-.payment-box h1 {
-    font-size: 24px;
-    font-weight: 700;
-}
-.ipay{
-    max-height: 34px;
-}
-.quot{
-    padding: 25px 0;
-}
-.payment-box .nav-tabs .nav-link.active{
+.history thead{
+    background-color: #10618C;
     color: #fff;
-    background-color: #32BEC0;
-    border-color: #32BEC0;
+    border: transparent;
 }
-.payment-box .nav-tabs .nav-link{
-    color: #000000;
-    border: 1px solid #000000;
-    border-radius: 0;
-    font-weight: 700;
-    font-size: 18px;
+.history.table>:not(:first-child),.history.table td, .history.table tr{
+    border: none !important;
 }
-.payment-box .nav-tabs{
-    border: none;
+.history tr td .btn{
+    border-radius: 5px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    width: 58px;
+    margin: 0 auto;
+    text-decoration: none;
 }
-.payment-box .list-group-item{
-    border: 1px solid #CED4DA;
-    transition: all 0.5s;
-    margin-bottom: 15px;
+.history tr td .btn-success{
+    background-color: #1E9A8B; 
 }
-.payment-box .list-group-item:hover{
-    border-color:#F05A28 ;
+.history tr td .btn-danger{
+    background-color: #DF5C5C;
+}
+.history tr td .btn-warning{
+    background-color: #426AF7;
+    border-color:#426AF7 ;
+    color: #fff;
+}
+.history tr td .btn-info{
+    background-color: #9B9B9B;
+    border-color:#9B9B9B; 
+    color: #fff;
+}
+.page-item .page-link{
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+}
+.page-item.active .page-link{
+    background-color: #1E9A8B;
+    border-color: #1E9A8B;
 }

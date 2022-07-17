@@ -1,19 +1,10 @@
 import React from "react";
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
-import Header from "../common/header";
-import Navigation from "./Navigation";
+import { Col, Form, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 function PlanQuotation() {
   return (
     <>
-      <Header />
-      <Container>
-        <Row className="align-items-center">
-          <Col md={4}>
-            <Navigation />
-          </Col>
-          <Col md={8}>
-            <div className="authentication-box">
+     <div className="payment-box">
               <div className="authentication-inputs">
                 <h1>Plan Quotation</h1>
                 <p className="mb-3">Generate quotation</p>
@@ -113,9 +104,6 @@ function PlanQuotation() {
                 </div>
               </div>
             </div>
-          </Col>
-        </Row>
-      </Container>
     </>
   );
 }

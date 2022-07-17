@@ -8,16 +8,16 @@ function Header() {
     return ( <>
     <header className='header-admin'>
       <Navbar expand="xl">
-      <Container fluid>
+      <Container >
         <Navbar.Brand href="/">
             <Image src={Logo}/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
-            <NavLink className="nav-link" to="/dashboard">Home</NavLink>
-            <NavLink className="nav-link" to="/admin/buyplan">Buy Plan</NavLink>
-          
+            <NavLink className="nav-link" to="/home">Home</NavLink>
+            <NavLink className="nav-link" to="/buyplan">Buy Plan</NavLink>
+            <NavLink className="nav-link" to="/">Admin</NavLink>
           </Nav>
         </Navbar.Collapse>
         <div className='login'>

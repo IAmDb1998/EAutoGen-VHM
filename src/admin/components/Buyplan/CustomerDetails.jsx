@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import Header from "../common/header";
-import Navigation from "./Navigation";
 import { useMutation } from "@apollo/client";
 import { CUSTO_DETAILS } from "../../../mutations/userMutations";
 import { useForm } from "../../../utils/hooks";
@@ -56,16 +54,8 @@ function CustomerDetails() {
     addUser();
   }
   return (
-    <>
-      <ToastContainer />
-      <Header />
-      <Container>
-        <Row className="align-items-center">
-          <Col md={4}>
-            <Navigation />
-          </Col>
-          <Col md={8}>
-            <div className="authentication-box">
+    <> 
+      <div className="payment-box">
               <div className="authentication-inputs">
                 <h1>Customer Details</h1>
                 <p className="mb-3">Input customer information</p>
@@ -76,7 +66,7 @@ function CustomerDetails() {
                     controlId="exampleForm.ControlTextarea1"
                   >
                     <Form.Label>
-                      Name <span className="text-danger">*</span>{" "}
+                      Name  <span className="text-danger">*</span>{" "}
                     </Form.Label>
                     <Form.Control
                       type="text"
@@ -151,9 +141,6 @@ function CustomerDetails() {
                 </Form>
               </div>
             </div>
-          </Col>
-        </Row>
-      </Container>
     </>
   );
 }

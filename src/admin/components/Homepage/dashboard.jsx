@@ -1,13 +1,9 @@
 import React from "react";
 import { Carousel, Col, Container, Form, Image, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import values_that_lead_us from "../../assets/img/values_that_lead_us.png";
-import Header from "../components/common/header";
-
-export function Dashboard() {
+import values_that_lead_us from "./../../../assets/img/values_that_lead_us.png";
+function Dashboard() {
   return (
-    <>
-    <Header />
     <Container>
       <Row>
         <Col md={4}>
@@ -249,7 +245,7 @@ export function Dashboard() {
         </Col>
       </Row>
     </Container>
-    </>
   );
 }
 
+export default Dashboard;
