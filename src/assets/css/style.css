@@ -10,7 +10,14 @@ header .navbar {
 header .navbar-brand img {
   height: 40px;
 }
-
+.privacy-policy h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.privacy-policy p {
+  font-size: 16px;
+  
+}
 header .navbar-light .navbar-nav .nav-link {
   font-weight: 700;
   font-style: normal;
@@ -348,7 +355,7 @@ footer .footer-bottom p {
   display: block;
   margin: 0 auto;
   position: relative;
-
+  
   display: flex;
   align-items: center;
   margin-top: -190px;
@@ -356,6 +363,7 @@ footer .footer-bottom p {
 .authentication-box_otp .authentication-inputs {
   width: 100%;
   margin-bottom: 15%;
+  
 }
 .authentication-box_otp h1 {
   font-size: 24px;
@@ -373,6 +381,7 @@ footer .footer-bottom p {
   bottom: -250px;
   left: 0;
   right: 0;
+  
 }
 .authentication-box .authentication-inputs {
   width: 100%;

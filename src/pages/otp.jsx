@@ -46,7 +46,7 @@ function OTP() {
       <ToastContainer />
       <Container fluid className="ps-0">
         <Row className="align-items-center">
-          <Col md={6}>
+          <Col md={6} className="d-none d-xl-block">
             <div className="authentication-content">
               <div className="logo">
                 <Image src={Logo} />
@@ -65,7 +65,7 @@ function OTP() {
               </Row>
             </div>
           </Col>
-          <Col md={6}>
+          <Col md={6}  style={{ paddingbottom: "40.5%", margin: "auto" }}>
             <div className="authentication-box_otp">
               <div className="authentication-inputs">
                 <h1>Check your email</h1>

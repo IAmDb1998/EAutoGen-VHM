@@ -13,6 +13,10 @@ import Select from 'react-select';
 import "react-toastify/dist/ReactToastify.css";
 function Banner() {
   const [errors, setErrors] = useState({});
+  const [checked, setChecked] = React.useState(false);
+  const handleChecked = () => {
+    setChecked(!checked);
+  };
   const { onChange, onSubmit, values } = useForm(handleSubmit, {
       email:"",
       year:"",
@@ -24,7 +28,7 @@ function Banner() {
       });
 
     const navigate = useNavigate();
-  //  console.log(values.brandName)
+ 
   localStorage.setItem("brandId",values.brandId)
     const [addUser] = useMutation(GETQUOTATION, {
       update(_, { data: { createQuotation: userData } }) {
@@ -79,16 +83,23 @@ function Banner() {
            toast("Please Enter Valid Mobile Number")
            return;
         }
+        else if(checked===false)
+        {
+          toast("Please Accept Terms And Conditions")
+          return;
+        }
+        
+        
        addUser();
     };
 
     var { data } = useQuery(GETAllBRANDS);
     const brand = data?.getAllBrands?.allVehicleRes;
-    // console.log("brand", brand);
+    
     const brandId= localStorage.getItem("brandId")
     var { data } = useQuery(GETAllMODELS, { variables: { brandId } });
     const model = data?.getBrandById?.allVehicleModelRes
-    // console.log("valueeee", model);
+    
  
  
   return (
@@ -243,9 +254,14 @@ function Banner() {
                   <Col md={8} className="d-flex m-auto">
                   <Form.Check
                       className="mb-3"
-                    > <Form.Check.Input type="checkbox" />
+                    > <Form.Check.Input 
+                    type="checkbox"
+         
+          onChange={handleChecked}
+                     />
                     <Form.Check.Label>By filling the checkbox and submitting this registration to eAutoGen. I understand and agree to the Terms and Conditions and Privacy Policy.</Form.Check.Label>
                         </Form.Check>
+                      
                   </Col>
                   <Col md={8} className="d-flex m-auto">
                     {/* <Button variant="primary" className=" text-center m-auto">GET QUOTE</Button> */}

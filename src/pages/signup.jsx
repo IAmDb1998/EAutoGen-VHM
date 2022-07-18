@@ -11,6 +11,10 @@ import values_that_lead_us from "./../assets/img/values_that_lead_us.png";
 import "react-toastify/dist/ReactToastify.css";
 function Signup() {
   const [errors, setErrors] = useState({});
+  const [checked, setChecked] = React.useState(false);
+  const handleChecked = () => {
+    setChecked(!checked);
+  };
   const { onChange, onSubmit, values } = useForm(handleSubmit, {
     email: "",
     mobile: "", 
@@ -57,6 +61,11 @@ function Signup() {
       toast("Please Enter Valid Mobile Number");
       return;
     }
+    else if(checked===false)
+    {
+      toast("Please Accept Terms And Conditions")
+      return;
+    }
     addUser();
   }
   return (
@@ -65,7 +74,7 @@ function Signup() {
       <section className="authentication">
         <Container fluid className="ps-0">
           <Row className="align-items-center">
-            <Col md={6}>
+            <Col md={6} className="d-none d-xl-block">
               <div className="authentication-content">
                 <div className="logo">
                   <Image src={Logo} />
@@ -84,7 +93,7 @@ function Signup() {
                 </Row>
               </div>
             </Col>
-            <Col md={6}>
+            <Col md={6}  style={{ paddingTop: "2.5%", margin: "auto" }}>
               <div className="authentication-box">
                 <div className="authentication-inputs mb-0">
                   <h1>Sign Up</h1>
@@ -141,7 +150,9 @@ function Signup() {
                     </Form.Group>
                     <Form.Check className="mb-3">
                       {" "}
-                      <Form.Check.Input type="checkbox" required />
+                      <Form.Check.Input type="checkbox" 
+                      onChange={handleChecked}
+                       />
                       <Form.Check.Label>
                         I hereby agree, lorem Ipsum is simply dummy text of the
                         printing and typesetting industry.{" "}

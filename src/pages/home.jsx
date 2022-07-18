@@ -37,6 +37,10 @@ function Homepage() {
     window.location.href = "/";
   };
 
+  function handlePrivacy() {
+    window.location.href = "/privacy-policy";
+  }
+
   return (
     <>
       <ToastContainer />
@@ -108,11 +112,7 @@ function Homepage() {
                       Login
                     </Dropdown.Item>
                   )}
-                  
-                  
                 </Dropdown.Menu>
-               
-               
               </Dropdown>
 
               <Link to="" className="mt-1">
@@ -226,7 +226,7 @@ function Homepage() {
                   <NavLink to="">Terms & Conditions</NavLink>
                 </li>
                 <li>
-                  <NavLink to="">Privacy Policy </NavLink>
+                  <NavLink onClick={handlePrivacy}>Privacy Policy </NavLink>
                 </li>
                 <li>
                   <NavLink to="">Refund Policy </NavLink>

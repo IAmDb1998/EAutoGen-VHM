@@ -15,7 +15,6 @@ function UserProfileUpdate() {
   const { onChange, onSubmit, values } = useForm(handleSubmit, {
     email: "",
     mobile: "",
-
     name: "",
   });
 
@@ -63,50 +62,53 @@ function UserProfileUpdate() {
   return (
     <>
       <ToastContainer />
-     <Header/>
+      <Header />
       <Container fluid>
         <Row className="justify-content-center text-center">
-          <Col md={2} className="mt-5 mb-2" >
-          {/* <Image src="https://picsum.photos/800/600?random=2" width="100px" height="100px" style={{borderRadius:"50%"}} /> */}
-          <i style={{fontSize:"80px"}} class="fa-regular fa-circle-user"></i>
+          <Col md={2} className="mt-5 mb-2">
+           
+            <i
+              style={{ fontSize: "80px" }}
+              class="fa-regular fa-circle-user"
+            ></i>
           </Col>
-          <p style={{color:"rgb(23, 190, 187)",font:"bold"}}>Upload Profile Picture</p>
+          <p
+            style={{
+              color: "rgb(23, 190, 187)",
+              font: "bold",
+              fontSize: "18px",
+            }}
+          >
+            Upload Profile Picture
+          </p>
         </Row>
       </Container>
-     
+
       <section className="authentication">
         <Container fluid className="ps-0">
           <Row className="align-items-center justify-content-center">
-           
             <Col md={5} className="p-0">
-              <div className="authentication-box" style={{marginTop:"0px"}}>
+              <div className="authentication-box" style={{ marginTop: "0px" }}>
                 <div className="authentication-inputs mb-0">
-                
-                  
                   <Form>
                     <Form.Group
                       className="mb-3"
                       controlId="exampleForm.ControlTextarea1"
                     >
-                      <Form.Label>
-                        Name 
-                      </Form.Label>
+                      <Form.Label>Name</Form.Label>
                       <Form.Control
                         type="text"
                         name="name"
                         required="required"
                         value={values.name}
                         onChange={onChange}
-                       
                       />
                     </Form.Group>
                     <Form.Group
                       className="mb-3"
                       controlId="exampleForm.ControlTextarea1"
                     >
-                      <Form.Label>
-                        Email 
-                      </Form.Label>
+                      <Form.Label>Email</Form.Label>
                       <Form.Control
                         type="email"
                         name="email"
@@ -120,9 +122,7 @@ function UserProfileUpdate() {
                       className="mb-3"
                       controlId="exampleForm.ControlTextarea1"
                     >
-                      <Form.Label>
-                        Phone Number
-                      </Form.Label>
+                      <Form.Label>Phone Number</Form.Label>
                       <Form.Control
                         type="number"
                         placeholder="e.g. 0123456789"
@@ -132,7 +132,7 @@ function UserProfileUpdate() {
                         onChange={onChange}
                       />
                     </Form.Group>
-                    
+
                     <div className="d-grid gap-2 mb-3">
                       <Button
                         variant="secondary"
@@ -142,7 +142,6 @@ function UserProfileUpdate() {
                       >
                         SAVE CHANGES
                       </Button>
-                     
                     </div>
                   </Form>
                 </div>
@@ -155,4 +154,4 @@ function UserProfileUpdate() {
   );
 }
 
-export  {UserProfileUpdate};
+export { UserProfileUpdate };

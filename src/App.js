@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/home";
 import Quotation from "./pages/Quotation";
 import PayPage from "./pages/pay";
+import {Privacypolicy} from "./pages/privacypolicy";
 import Checkoutpage from "./pages/checkoutpage";
 import CheckoutUnsuccessPage from "./pages/checkoutunsuccesspage";
 import Login from "./pages/login";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/login/otp" element={<OTP />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/privacy-policy" element={<Privacypolicy/>} />
           {/* Admin */}
         
           <Route path="/userprofile" element={<UserProfileUpdate/>} />

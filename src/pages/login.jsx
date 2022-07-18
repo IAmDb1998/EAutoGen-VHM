@@ -47,7 +47,7 @@ function Login() {
 
       <Container fluid className="ps-0">
         <Row className="">
-          <Col md={6}>
+          <Col md={6} className="d-none d-xl-block">
             <div className="authentication-content">
               <div className="logo">
                 <Image src={Logo} />
@@ -66,7 +66,7 @@ function Login() {
               </Row>
             </div>
           </Col>
-          <Col md={6}>
+          <Col md={6} style={{ paddingTop: "2.5%", margin: "auto" }}>
             <div className="authentication-box">
               <div className="authentication-inputs">
                 <h1>Welcome to eAutoGen Capital</h1>

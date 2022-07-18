@@ -7,6 +7,10 @@ import { useForm } from "../../../utils/hooks";
 import { ToastContainer, toast } from "react-toastify";
 function CustomerDetails() {
   const navigate = useNavigate();
+  const [checked, setChecked] = React.useState(false);
+  const handleChecked = () => {
+    setChecked(!checked);
+  };
   const [errors, setErrors] = useState({});
   const { onChange, onSubmit, values } = useForm(handleSubmit, {
     name: "",
@@ -49,6 +53,11 @@ function CustomerDetails() {
       return;
     } else if (values.mobile.length < 8) {
       toast("Please Enter Valid Mobile Number");
+      return;
+    }
+    else if(checked===false)
+    {
+      toast("Please Accept Terms And Conditions")
       return;
     }
     addUser();
