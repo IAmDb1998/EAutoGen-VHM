@@ -74,7 +74,7 @@ function Signup() {
       <section className="authentication">
         <Container fluid className="ps-0">
           <Row className="align-items-center">
-            <Col md={6} className="d-none d-xl-block">
+            <Col md={6}>
               <div className="authentication-content">
                 <div className="logo">
                   <Image src={Logo} />
@@ -93,8 +93,8 @@ function Signup() {
                 </Row>
               </div>
             </Col>
-            <Col md={6}  style={{ paddingTop: "2.5%", margin: "auto" }}>
-              <div className="authentication-box">
+            <Col md={6} >
+              <div className="authentication-box h-auto">
                 <div className="authentication-inputs mb-0">
                   <h1>Sign Up</h1>
                   <p>Fill up your personal information with AUTOGEN.</p>

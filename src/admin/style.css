@@ -271,3 +271,21 @@ position: relative;
     background-color: #1E9A8B;
     border-color: #1E9A8B;
 }
+.dealer-overview{
+    border: 1px solid #E4E8EB;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+.dealer-overview span{
+    font-size: 20px;
+    color: #000000;
+}
+.dealer-overview h1{
+    color: #1FACB1;
+    font-size: 30px;
+    font-weight: 700;
+}
+.datepicker .dropdown-item{
+padding: 0;
+}

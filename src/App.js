@@ -14,6 +14,7 @@ import BuyPlanCar from "./admin/pages/buyplandetails";
 import { UserProfileUpdate } from "./pages/UserProfileUpdate";
 import HomePageAdmin from "./admin/pages/home";
 import PagenotFound from "./pages/pagenotfound";
+import HomePageDealer from "./dealer/pages/home";
 function App() {
   return (
     <div className="App">
@@ -34,6 +35,9 @@ function App() {
 
           <Route path="/buyplan" element={<BuyPlanCar />}/>
           <Route path="/home" element={<HomePageAdmin />}/>
+          <Route path="/dealer" element={<HomePageDealer />}/>
+
+          
           <Route path="*" element={<PagenotFound />}/>
           {/* <Route path="expenses" element={<Expenses />} />
       <Route path="invoices" element={<Invoices />} /> */}
