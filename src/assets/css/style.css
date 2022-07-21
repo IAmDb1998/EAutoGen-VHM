@@ -21,11 +21,11 @@ header .navbar-brand img {
 header .navbar-light .navbar-nav .nav-link {
   font-weight: 700;
   font-style: normal;
-  color: rgb(255, 255, 255);
+  color: #000000;
   text-decoration: none;
 }
 header .login {
-  color: rgb(255, 255, 255);
+  color: #000000;
   line-height: 27px;
   letter-spacing: 0em;
   --para-spacing: 0;
@@ -39,7 +39,7 @@ header .login i {
   font-size: 24px;
 }
 header .login a {
-  color: #fff;
+  color: #000000;
   padding: 0 5px;
   font-size: 19.4649px;
 }
@@ -48,7 +48,7 @@ header .login a {
   box-shadow: none;
 }
 .dropdown-toggle::after {
-  color: white;
+  color: #000000;
 }
 .banner {
   background-image: url(../img/banner_bg.png);
@@ -68,6 +68,9 @@ header .login a {
   --numeric-list-marker: none;
   list-style-type: none;
   font-weight: 700;
+}
+.banner_form{
+  border:"1px solid red";
 }
 .banner .banner-content p {
   font-size: 18.6578px;
@@ -122,7 +125,7 @@ header .login a {
   font-weight: 700;
 }
 .section-title h2 span {
-  color: rgb(12, 76, 130);
+  color: black;
   font-size: 42px;
 }
 .section-title.light span {
@@ -197,13 +200,7 @@ header .login a {
   font-size: 12px;
   text-align: center;
 }
-.workshops {
-  background-image: url(../img/locate_us_bg.png);
-  position: relative;
-  background-size: cover;
-  position: relative;
-  z-index: 1;
-}
+
 .workshops::after {
   content: "";
   position: absolute;
@@ -425,7 +422,13 @@ footer .footer-bottom p {
   display: none;
 }
 
-
+.banner_form{
+ 
+  padding:20px;
+  position:relative;
+  bottom:150px;
+  background-color: #F4F6F6;
+}
 
 /* mobile view */
 @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -487,11 +490,11 @@ footer .footer-bottom p {
     display: none;
   }
   .hiw_img {
-    height: 176px;
-    width: 176px;
+    
     margin: auto;
     justify-content: center;
     display: flex;
+   
   }
 
   .how_work strong {

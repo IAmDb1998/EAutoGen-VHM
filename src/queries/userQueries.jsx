@@ -21,6 +21,21 @@ const GETAllMODELS = gql`
   }
 `;
 
+const GETALLDEALERUSERS = gql`
+ query getAllUserCreatedByAdmin($createdByuserId: ID) 
+ {
+  getAllUserCreatedByAdmin(createdByuserId: $createdByuserId) {
+    allUserRes {
+      id
+      name
+      email
+      mobile
+      role
+      status
+    }
+  }
+}
+`;
 const GETALLSTATES = gql`
   query {
   getAllState
@@ -48,4 +63,4 @@ const GETALLSTATES = gql`
     }
   }
   `
-export { GETAllBRANDS, GETAllMODELS ,GETALLSTATES,GETAllWORKSHOPS};
+export { GETAllBRANDS, GETAllMODELS ,GETALLSTATES,GETAllWORKSHOPS,GETALLDEALERUSERS};

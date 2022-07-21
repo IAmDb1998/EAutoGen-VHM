@@ -1,0 +1,19 @@
+.workshopone{
+    justify-content: center;
+}
+.workshopone p{
+    font-size: 14px;
+    color:#777777;
+    line-height: 30px;
+}
+.workshopone_left {
+  
+}
+.workshopone_left h1{
+    font-size: 14px;
+    color:#00000066
+  }
+  .workshopone_left h2{
+    font-size: 42px;
+    color:#000000;
+  } 

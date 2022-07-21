@@ -12,3 +12,12 @@ body{
 ul {
   list-style-type: none;
 }
+
+table, th, td {
+  
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}

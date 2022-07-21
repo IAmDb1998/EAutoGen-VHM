@@ -1,21 +1,19 @@
 import React, { useRef } from "react";
 import { Container, Image, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Logo from "./../../assets/img/eautogen_white.svg";
-function Header() {
+import Logo from "./../../assets/img/header_bg.png";
+export function Header() {
   return (
     <>
       <header
-        style={{
-          background:
-            "-webkit-linear-gradient(left, rgb(12, 78, 131) 0%, rgb(21, 121, 152) 40%, rgb(29, 164, 173) 80%, rgb(34, 185, 184) 100%)",
-        }}
+       
       >
         <Navbar expand="lg">
           <Container>
             <Navbar.Brand href="/">
               <Image src={Logo} />
             </Navbar.Brand>
+           
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="m-auto">
@@ -39,4 +37,4 @@ function Header() {
   );
 }
 
-export default Header;
+

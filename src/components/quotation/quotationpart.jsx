@@ -1,7 +1,7 @@
 import React ,{useState}from "react";
 import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import car_wireframe from "../../assets/img/car_wireframe.png";
-import eautogen_product from "../../assets/img/eautogen_product.png";
+import eautogen_product from "../../assets/img/header_bg.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { CUSTO_DETAILS} from "../../mutations/userMutations";

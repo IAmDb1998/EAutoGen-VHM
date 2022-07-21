@@ -85,20 +85,9 @@ function AuthorizedWorkshops() {
     <>
       <section className="py-5 workshops">
         <Container>
-          <Row>
-            <Col md={12}>
-              <div className="section-title">
-                <span>Authorized Workshops</span>
-                <h2>
-                  <span>
-                    GET YOUR CAR INSPECTED
-                    <br /> FOR PLAN ACTIVATION
-                  </span>{" "}
-                </h2>
-              </div>
-            </Col>
-          </Row>
+         
           <Row className="justify-content-center">
+          <Col md={10}>
             <Col md={4}>
               {" "}
               <Form.Group
@@ -115,10 +104,12 @@ function AuthorizedWorkshops() {
    
                 </Form.Select>
               </Form.Group>
+              </Col>
             </Col>
           </Row>
           
-        
+        <Row className="justify-content-center">
+            <Col md={10}>
           <Carousel
         autoPlay={false}
         onClick={handleChangePage}
@@ -159,12 +150,10 @@ function AuthorizedWorkshops() {
         	</Grid>
         </Container>
       </Carousel>
+      </Col>
+      </Row>
          
-          <Row>
-          <Col md={8} className="d-flex m-auto mt-5">
-                    <Button variant="primary"  onClick={() => window.scrollTo(0, window.innerHeight)} className=" text-center m-auto">GET QUOTE</Button>
-                  </Col>
-          </Row>
+        
         </Container>
       </section>
     </>

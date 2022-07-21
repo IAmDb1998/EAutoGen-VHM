@@ -19,6 +19,57 @@ const SIGNUP = gql`
   }
 `;
 
+const DEALER_USER=gql`
+mutation   userCreateByDealer(
+  $name: String
+  $email: String
+  $mobile: String
+  $role: String
+  $status: String
+  $createdBy: ID
+){
+  userCreateByDealer(
+    name: $name
+    email:$email 
+    mobile:$mobile
+    role: $role
+    status:$status
+    createdBy:$createdBy
+  ) {
+    userId
+    message
+    token
+    error
+    name
+    email
+    mobile
+    role
+  }
+}
+`; 
+
+const USER_PROFILE_UPDATE = gql`
+ mutation updateUserProfile(
+  $userId: String
+  $name: String
+  $email: String
+  $mobile: String
+
+ )
+ {
+  updateUserProfile(
+    userId: $userId
+     name:$name
+     email:$email
+    mobile:$mobile
+  ) {
+         message
+         error
+   
+    
+   }
+}
+`;
 const CUSTO_DETAILS = gql`
 mutation customerDetails(
   $name: String
@@ -116,4 +167,4 @@ mutation   verifyOtp(
 
 `
 
-export { LOGIN, SIGNUP ,USER_OTP,GETQUOTATION,CUSTO_DETAILS};
+export { LOGIN, SIGNUP ,USER_OTP,GETQUOTATION,CUSTO_DETAILS,DEALER_USER,USER_PROFILE_UPDATE};

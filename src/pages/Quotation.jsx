@@ -7,7 +7,7 @@ import WhatIncluded from "../components/common/included";
 import QuotationPart from "../components/quotation/quotationpart";
 function Quotation() {
   useEffect(() => {
-    if (!localStorage.getItem("token")) {
+    if (!localStorage.getItem("userId")) {
       window.location.href = "/login";
     }
   }, []);

@@ -28,7 +28,7 @@ function Signup() {
   const [addUser, { loading }] = useMutation(SIGNUP, {
     update(_, { data: { registerUser: userData } }) {
       // console.log("signup result ", userData);
-      localStorage.setItem("token", userData.userId);
+      localStorage.setItem("userId", userData.userId);
       // practice
 
       if (userData) {

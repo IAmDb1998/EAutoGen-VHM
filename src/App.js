@@ -15,12 +15,17 @@ import { UserProfileUpdate } from "./pages/UserProfileUpdate";
 import HomePageAdmin from "./admin/pages/home";
 import PagenotFound from "./pages/pagenotfound";
 import HomePageDealer from "./dealer/pages/home";
+import { Dealeradmin } from "./dealer/pages/dealeradmin";
+import { CreateUserForm } from "./dealer/pages/CreateUserForm/CreateUserForm";
+import { ChakraProvider } from '@chakra-ui/react'
+import { LandingPage } from "./pages/LandingPage/LandingPage";
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+       
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          {/* <Route path="/" element={<Homepage />} /> */}
           <Route path="/quotation" element={<Quotation />} />
           <Route path="/pay" element={<PayPage />} />
           <Route path="/checkout" element={<Checkoutpage />} />
@@ -29,10 +34,12 @@ function App() {
           <Route path="/login/otp" element={<OTP />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/privacy-policy" element={<Privacypolicy/>} />
+          <Route path="/dealer-admin" element={<Dealeradmin/>} />
+          <Route path="/createuser" element={<CreateUserForm/>} />
           {/* Admin */}
         
           <Route path="/userprofile" element={<UserProfileUpdate/>} />
-
+          <Route path="/" element={<LandingPage/>} />
           <Route path="/buyplan" element={<BuyPlanCar />}/>
           <Route path="/home" element={<HomePageAdmin />}/>
           <Route path="/dealer" element={<HomePageDealer />}/>
@@ -42,6 +49,7 @@ function App() {
           {/* <Route path="expenses" element={<Expenses />} />
       <Route path="invoices" element={<Invoices />} /> */}
         </Routes>
+       
       </BrowserRouter>
     </div>
   );

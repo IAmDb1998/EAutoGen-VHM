@@ -1,0 +1,79 @@
+.carengine_left{
+    padding-top: 30px;
+    align-items: center;
+}
+.carengine_left p{
+    color:#00000066;
+    font-size:14px;
+    line-height: 25px;
+}
+.carengine_left h2{
+  
+    font-size:14px;
+    line-height: 25px;
+    margin-top:25px;
+    margin-bottom: 25px;
+}
+.carengine_left h1{
+   
+    font-size:42px;
+    line-height: 45px;
+}
+.getengine{
+    padding:10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.enginedrop{
+    justify-content: center;
+}
+.enginedrop h3{
+    font-size: 16px;
+   font-weight: bold;
+
+}
+.enginedrop p{
+    font-size: 14px;
+      line-height: 25px;
+}
+.btn-success {
+    /* color: #fff; */
+    /* background-color: #198754; */
+   border:1px solid #CED4DA;
+    width: 100%;
+    text-align: left;
+    background-color: #ffffff;
+    color: #777777;
+
+}
+.btn-success:hover {
+    /* color: #fff; */
+    /* background-color: #198754; */
+   border:1px solid #CED4DA;
+    width: 100%;
+    text-align: left;
+    background-color: #ffffff;
+    color: #777777;
+
+}
+.btn-success {
+    /* color: #fff; */
+    /* background-color: #198754; */
+   border:1px solid #CED4DA;
+    width: 100%;
+    text-align: left;
+    background-color: #ffffff;
+    color: #777777;
+
+}
+.show>.btn-success.dropdown-toggle {
+   background-color: #ffffff;
+    color: #777777;
+}
+.btn-check:focus+.btn-success, .btn-success:focus {
+    color: #777777;
+   background-color: #ffffff;
+   
+    box-shadow: none;
+}

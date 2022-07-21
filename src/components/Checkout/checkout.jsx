@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import car_wireframe from "../../assets/img/covered.png";
-import eautogen_product from "../../assets/img/eautogen_product.png";
+import eautogen_product from "../../assets/img/header_bg.png";
 function Checkoutbox() {
     return (  <section className="py-5 mt-5">
     <Container>

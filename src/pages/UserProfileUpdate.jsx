@@ -3,7 +3,7 @@ import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "./../assets/img/eautogen_white.svg";
 import { useMutation } from "@apollo/client";
-import { SIGNUP } from "./../mutations/userMutations";
+import { USER_PROFILE_UPDATE } from "./../mutations/userMutations";
 import { useForm } from "../utils/hooks";
 import { ToastContainer, toast } from "react-toastify";
 import { useQuery } from "@apollo/react-hooks";
@@ -16,23 +16,19 @@ function UserProfileUpdate() {
     email: "",
     mobile: "",
     name: "",
+    userId: `${localStorage.getItem("userId")}`,
   });
 
   // const [validated, setValidated] = useState(false);
   const navigate = useNavigate();
 
-  const [addUser, { loading }] = useMutation(SIGNUP, {
-    update(_, { data: { registerUser: userData } }) {
-      // console.log("signup result ", userData);
-      localStorage.setItem("token", userData.userId);
-      // practice
+  const [addUser, { loading }] = useMutation(USER_PROFILE_UPDATE, {
+    update(_, { data: { updateUserProfile: userData } }) {
+      console.log("signup result ", userData);
+      
+     
 
-      if (userData) {
-        toast("User Created Successfully");
-      }
-      setTimeout(() => {
-        navigate("/login");
-      }, 1000);
+      toast(userData.message);
     },
     onError(err) {
       setErrors(err);
@@ -57,7 +53,7 @@ function UserProfileUpdate() {
       toast("Please Enter Valid Mobile Number");
       return;
     }
-    navigate("/");
+    addUser();
   }
   return (
     <>

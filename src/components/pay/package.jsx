@@ -23,10 +23,10 @@ function Package() {
           <Col md={4}>
             <div className="quot">
               <Row>
-                <Col md={4}>
+                <Col md={6}>
                   <strong>Owner Name: </strong>
                 </Col>
-                <Col md={8}>
+                <Col md={6}>
                   <p>{localStorage.getItem("owner_name")}</p>
                 </Col>
                 <Col md={4}>

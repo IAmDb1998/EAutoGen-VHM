@@ -96,7 +96,7 @@ function Homepage() {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                  {localStorage.getItem("token") ? (
+                  {localStorage.getItem("userId") ? (
                     <Dropdown.Item
                       href="/login"
                       onClick={userLogout}

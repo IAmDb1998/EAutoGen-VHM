@@ -1,0 +1,45 @@
+.girl_right h1{
+   font-size: 14px;
+   color:#777777;
+   line-height: 30px;
+}
+.girl_right h2{
+    font-size: 42px;
+   
+   
+ }
+ .girl_right h3{
+    font-size: 14px;
+   color:#000000;
+   margin: 10px 0px 30px 0px;
+   
+ }
+ .girl_right span{
+    font-size: 14px;
+    color:#29BEBA;
+    text-decoration: underline;
+    font-family: 'Italic';
+   position: relative;
+   top: 30px;
+ }
+.girl_right{
+    text-align: right;
+}
+.getstarted{
+    padding:10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.girlpara{
+    justify-content: center;
+}
+.girlpara h1{
+    font-size: 16px;
+    color:#000000;
+
+}
+.girlpara p{
+    font-size: 14px;
+    color:#000000;
+
+}

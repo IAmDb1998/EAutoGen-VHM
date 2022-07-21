@@ -1,0 +1,31 @@
+.brandslider p {
+  font-size: 14px;
+  color: #00000066;
+}
+.brandslider h1 {
+  font-size: 42px;
+}
+.brandslider_right p{
+    font-size: 14px;
+    line-height: 24px;
+    justify-content: right;
+   
+}
+.brandslider_right span{
+   
+    color:#32bec0
+    
+}
+.brandcarausal{
+   
+    margin:25px
+}
+.brandcarausal p{
+   margin:15px;
+    font-size:12px;
+}
+.getstarted{
+    padding:10px;
+    font-size: 20px;
+    font-weight: bold;
+}
