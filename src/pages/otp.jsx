@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "./../assets/img/eautogen_white.svg";
+import Logo_mobile from "./../assets/img/header_bg.png";
 import values_that_lead_us from "./../assets/img/values_that_lead_us.png";
 import { useMutation } from "@apollo/client";
 import { USER_OTP } from "./../mutations/userMutations";
@@ -41,12 +42,13 @@ function OTP() {
       otpUser();
     }
   }
-  return (
+  return (<>
+    <ToastContainer />
     <section className="authentication">
-      <ToastContainer />
-      <Container fluid className="ps-0">
+    
+      <Container fluid className="ps-lg-0">
         <Row className="align-items-center">
-          <Col md={6} className="d-none d-xl-block">
+          <Col lg={6} className="d-none d-xl-block">
             <div className="authentication-content">
               <div className="logo">
                 <Image src={Logo} />
@@ -65,9 +67,10 @@ function OTP() {
               </Row>
             </div>
           </Col>
-          <Col md={6}  style={{ paddingbottom: "40.5%", margin: "auto" }}>
+          <Col lg={6} >
             <div className="authentication-box_otp">
               <div className="authentication-inputs">
+              <Image src={Logo_mobile} className="d-block d-xl-none mobile-logo" fluid/>
                 <h1>Check your email</h1>
                 <p>We’ve sent you OTP code to your email.</p>{" "}
                 <Form>
@@ -110,12 +113,13 @@ function OTP() {
                 </p>
               </div>
 
-              <Image src={values_that_lead_us} fluid width="50%" height="50%" />
+              <Image src={values_that_lead_us} fluid className="d-none d-xl-block" />
             </div>
           </Col>
         </Row>
       </Container>
     </section>
+    </>
   );
 }
 

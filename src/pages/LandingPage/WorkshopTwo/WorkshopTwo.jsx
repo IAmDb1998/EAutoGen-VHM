@@ -5,17 +5,20 @@ import "./WorkshopTwo.css";
 export const WorkshopTwo = () => {
   return (
     <div
-      style={{ marginTop: "90px", background: "#F4F6F6", paddingTop: "50px" }}
+      style={{ background: "#F4F6F6" }} 
+      className="py-5"
     >
       <Container>
         <Row className="workshopone">
-          <Col md={6} className="workshopone_left">
-            <h1>EAUTOZEN'S PANELS WORKSHOPS</h1>
+          <Col md={6} className="section-title text-lg-start">
+            <span>EAUTOZEN'S PANELS WORKSHOPS</span>
             <h2>
+              <span>
               Nationwide Access To <br /> 200+ Panel Workshops
+              </span>
             </h2>
           </Col>
-          <Col md={4}>
+          <Col md={6}>
             <p>
               With over 200 panel workshops nationwide, making it convenient and
               accessible for your periodic car maintenance and repair work.

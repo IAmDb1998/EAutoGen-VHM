@@ -27,7 +27,7 @@ function HowItWorks() {
               <strong className="pb-2 d-flex">
                 Tell Us About You And Your Car
               </strong>
-              <p>
+              <p className="pb-2">
                 Complete form with the required details to get an instant
                 quotation for your AutoGen PLUS program.
               </p>
@@ -40,16 +40,9 @@ function HowItWorks() {
                 src={Letter}
                 fluid
                 className="hiw_img"
-                width="150px"
-                height="250px"
-                style={{
-                  margin: "auto",
-                  display: "flex",
-                  paddingBottom: "80px",
-                }}
               />
               <strong className="pb-2 d-flex">Receive Order Code</strong>
-              <p>
+              <p className="pb-2">
                 Upon successful payment, an order code with 90 days validity
                 will be sent to your registered email.
               </p>
@@ -58,9 +51,9 @@ function HowItWorks() {
               <Image src={arrow} className="arrow_img" />
             </Col>
             <Col md={3}>
-              <Image src={car_inspection_icon} fluid className="hiw_img" />
+              <Image src={car_inspection_icon} className="hiw_img" fluid />
               <strong className="pb-2  d-flex">Program Activation</strong>
-              <p>
+              <p className="pb-2">
                 Visit any of our authorized partners with your order code to
                 have your car inspected for AutoGen PLUS program activation.
               </p>

@@ -4,29 +4,21 @@ import Girl from "../../../assets/img/girl.png"
 import "./GirlInCar.css"
 export const GirlInCar = () => {
   return (
-    <div style={{paddingTop:'50px'}}>
+    <div className="py-5">
       <Container>
-        <Row className="justify-content-center">
-          <Col md={5}> <Image src={Girl} fluid/> </Col>
-          <Col md={5} className="girl_right">
-            <h1>AUTOGEN PLUS PROGRAM <br/>COVERAGE AND REQUIREMENT</h1>
-            <Row>
-            <Col md={3} >
-           
-            </Col>
-            <Col md={9} >
-            <h2>Repair Value On In-Scope Components</h2>
-            </Col>
-            </Row>
-            <h3>Cushioning you financially for unwanted surprises.</h3>
+        <Row className="justify-content-center align-items-center">
+          <Col md={6}> <Image src={Girl} fluid/> </Col>
+          <Col md={6} className="section-title text-lg-end">
+          <span>AUTOGEN PLUS PROGRAM <br/>COVERAGE AND REQUIREMENT</span>
+          <h2><span>Repair Value On In-Scope Components</span></h2>
+            <p className="pb-lg-5">Cushioning you financially for unwanted surprises.</p>
             <Button className="getstarted" variant="secondary">GET STARTED</Button>
-            <p><span>See all eAutoGen's panel workshops.</span></p>
+            <p>See all eAutoGen's panel workshops.</p>
           </Col>
         </Row>
 
-        <Row  className="girlpara">
-        <Col md={1}></Col>
-          <Col md={5}>
+        <Row  className="girlpara justify-content-center align-items-center">
+          <Col lg={6}>
             <h1>Up To RM20,000 Per Annum Repair Value</h1>
             <p>
               Enjoy up to RM20,000 repair and replacement value per annum on
@@ -36,7 +28,7 @@ export const GirlInCar = () => {
             </p>
           </Col>
           
-          <Col md={5}>
+          <Col lg={6}>
             <h1>Capped At RM10,000 Per Visit </h1>
             <p>
               Save up to RM10,000 per visit (with no upfront payment required)

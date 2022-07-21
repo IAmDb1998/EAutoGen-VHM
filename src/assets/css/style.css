@@ -190,6 +190,7 @@ header .login a {
 }
 .how_work {
   box-shadow: 0 2px 8px rgb(14 19 24 / 7%);
+  margin-top: 150px;
 }
 .how_work strong {
   font-size: 14px;
@@ -425,12 +426,169 @@ footer .footer-bottom p {
 .banner_form{
  
   padding:20px;
-  position:relative;
-  bottom:150px;
+  position:absolute;
+  bottom:-150px;
   background-color: #F4F6F6;
 }
+.btn-outline-secondary:hover{
+  background-color: #29989a;
+  border-color: #29989a;
+}
+.btn{
+  transition: all 0.5s;
+}
+.btn-danger{
+  background-color: #DF5C5C;
+  border-color: #DF5C5C;
+}
+.btn-danger:hover{
+  background-color: #c33737;
+  border-color: #c33737;
+}
+.text-danger{
+  color: #DF5C5C;
+}
+.hero-bg {
+  background-image: url(../img/herobg.png);
+  /* height: 100vh; */
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  margin: 0 auto;
+  height: 100vh;
+  max-height: 768px;
+  display: flex;
+  background-position: center;
+  align-items: center;
+}
 
+.hiw_img{
+  max-width: 96px;
+  display: flex;
+    margin: 0 auto;
+}
 /* mobile view */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .desk_logo {
+    display: none;
+    height: 40px;
+  }
+  .banner .banner-content h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+@media screen and (min-device-width: 540px) and (max-device-width: 720px) {
+  .desk_logo {
+    display: none;
+    height: 40px;
+  }
+  header .navbar-brand img {
+    height: 55px;
+  }
+  .banner .banner-content h1 {
+    font-size: calc(20px);
+    margin: 0 auto;
+  }
+  header .login {
+    display: flex;
+    color: black;
+  }
+  header .login a {
+    color: black;
+  }
+  .login_mobile {
+    display: block;
+  }
+  .banner {
+    background-position: right;
+  }
+  .autogen .section-img {
+    display: none;
+  }
+  .banner img {
+    bottom: -35px;
+  }
+  .banner-content {
+    margin-bottom: -100px;
+  }
+  .logo {
+    display: none;
+  }
+  .desk_logo {
+    display: block;
+    height: 40px;
+  }
+  header .navbar {
+    background-color: white;
+  }
+  header .navbar-light .navbar-nav .nav-link {
+    color: black;
+  }
+  i.fa-regular.fa-circle-user {
+    color: black !important;
+  }
+
+  .section-title h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .section-title h2 span {
+    font-size: 30px;
+    text-align: center;
+  }
+  .arrow_img {
+    display: none;
+  }
+  .hiw_img {
+    height: 176px;
+    width: 176px;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+  }
+
+  .how_work strong {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    font-weight: bold;
+  }
+  .how_work p {
+    width: 80%;
+    margin: auto;
+  }
+  .faq,
+  footer {
+    background-position: right;
+  }
+  .faq .faq-box {
+    border: none;
+  }
+  .claim_img {
+    display: block;
+  }
+  .desk_claim_img {
+    display: none;
+  }
+
+  /* quotaion page  */
+  .autogen .icon-box {
+    display: grid;
+  }
+  .banner_form{
+    position: relative;
+    bottom: 0;
+    top: -85px;
+  }
+  .how_work{
+    margin-top: 0;
+  }
+}
+
 @media screen and (min-width: 320px) and (max-width: 480px) {
   header .navbar-brand img {
     height: 40px;
@@ -537,14 +695,6 @@ footer .footer-bottom p {
 
 
   /* login */
-  .authentication-box {
-    height: auto;
-    width: 85%;
-}
-.authentication-box_otp{
-  width: 85%;
-  margin-top: 90px;
-}
 .btn-secondary{
     background-color: #32BEC0;
     border-color: #32BEC0;
@@ -554,136 +704,22 @@ footer .footer-bottom p {
 .btn-secondary:hover{
     background-color: #29989a;
     border-color: #29989a;
-}}
-
-@media screen and (min-device-width: 540px) and (max-device-width: 720px) {
-  .desk_logo {
-    display: none;
-    height: 40px;
-  }
-  header .navbar-brand img {
-    height: 55px;
-  }
-  .banner .banner-content h1 {
-    font-size: calc(20px);
-    margin: 0 auto;
-  }
-  header .login {
-    display: flex;
-    color: black;
-  }
-  header .login a {
-    color: black;
-  }
-  .login_mobile {
-    display: block;
-  }
-  .banner {
-    background-position: right;
-  }
-  .autogen .section-img {
-    display: none;
-  }
-  .banner img {
-    bottom: -35px;
-  }
-  .banner-content {
-    margin-bottom: -100px;
-  }
-  .logo {
-    display: none;
-  }
-  .desk_logo {
-    display: block;
-    height: 40px;
-  }
-  header .navbar {
-    background-color: white;
-  }
-  header .navbar-light .navbar-nav .nav-link {
-    color: black;
-  }
-  i.fa-regular.fa-circle-user {
-    color: black !important;
-  }
-
-  .section-title h2 {
-    font-size: 30px;
-    text-align: center;
-  }
-  .section-title h2 span {
-    font-size: 30px;
-    text-align: center;
-  }
-  .arrow_img {
-    display: none;
-  }
-  .hiw_img {
-    height: 176px;
-    width: 176px;
-    margin: auto;
-    justify-content: center;
-    display: flex;
-  }
-
-  .how_work strong {
-    font-size: 18px;
-    text-align: center;
-    width: 100%;
-    margin: auto;
-    justify-content: center;
-    font-weight: bold;
-  }
-  .how_work p {
-    width: 80%;
-    margin: auto;
-  }
-  .faq,
-  footer {
-    background-position: right;
-  }
-  .faq .faq-box {
-    border: none;
-  }
-  .claim_img {
-    display: block;
-  }
-  .desk_claim_img {
-    display: none;
-  }
-
-  /* quotaion page  */
-  .autogen .icon-box {
-    display: grid;
-  }
+}
+.hero-bg{
+  max-height: 320px;
+}
+.banner_form{
+  position: relative;
+  bottom: 0;
+  top: -85px;
+}
+.how_work{
+  margin-top: 0;
+}
+.hero-bg img{
+  max-width: 115px;
+}
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .desk_logo {
-    display: none;
-    height: 40px;
-  }
-  .banner .banner-content h1 {
-    font-size: 40px;
-    line-height: 40px;
-  }
-}
-.btn-outline-secondary:hover{
-    background-color: #29989a;
-    border-color: #29989a;
-}
-.btn{
-    border-radius: 0;
-    transition: all 0.5s;
-}
-.btn-danger{
-    background-color: #DF5C5C;
-    border-color: #DF5C5C;
-}
-.btn-danger:hover{
-    background-color: #c33737;
-    border-color: #c33737;
-}
-.text-danger{
-    color: #DF5C5C;
-}
+
+

@@ -289,3 +289,18 @@ position: relative;
 .datepicker .dropdown-item{
 padding: 0;
 }
+@media only screen and (max-width: 1024px) {
+    .authentication-box img.mobile-logo,.authentication-box_otp img.mobile-logo {
+     position: relative;
+     margin-bottom: 50px;
+     max-width: unset;
+     width: 100%;
+     bottom: unset;
+    }
+    .authentication-box,.authentication-box_otp{
+        margin-top: 45px;
+    }
+    .authentication-box_otp .authentication-inputs{
+        margin-bottom: 0;
+    }
+  }

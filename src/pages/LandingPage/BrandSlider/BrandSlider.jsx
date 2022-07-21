@@ -8,17 +8,16 @@ import Brand4 from "../../../assets/img/4.png";
 import "./BrandSlider.css";
 export const BrandSlider = () => {
   return (
-    <div style={{padding:"25px"}}>
+    <div className="py-5">
       <Container>
-        <Row  className="justify-content-center" >
-          <Col md={5} className="brandslider">
+        <Row  className="justify-content-center align-items-center" >
+          <Col lg={6} className="section-title text-lg-start">
             <p>AUTOGEN PLUS program ELIGIBILITY</p>
             <Col md={10}>
-            <h1>AutoGen PLUS Extended Warranty Program</h1>
+            <h2><span>AutoGen PLUS Extended Warranty Program</span></h2>
             </Col>
           </Col>
-          <Col md={5} className="brandslider_right" >
-          <Col md={12}>
+          <Col lg={6} className="brandslider_right" >
             <p>
               Designed to pick you and your car up where your auto warranty
               expires, AutoGen PLUS is an extended warranty program allowing all
@@ -26,11 +25,10 @@ export const BrandSlider = () => {
               (from manufacturing year) and within <span> odometer reading of 200,000
               kilometers </span>at the time of activation of this warranty plan.
             </p>
-            </Col>
           </Col>
         </Row>
         <Row className="justify-content-center">
-          <Col md={8} className="brandcarausal">
+          <Col md={10} className="brandcarausal">
           <Carousel>
             <Carousel.Item>
               <Image src={Brand1} fluid />

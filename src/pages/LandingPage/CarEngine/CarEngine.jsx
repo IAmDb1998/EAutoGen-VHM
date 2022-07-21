@@ -5,36 +5,34 @@ import Dropdown from "react-bootstrap/Dropdown";
 import "./CarEngine.css";
 export const CarEngine = () => {
   return (
-    <div style={{ padding: "25px" }}>
+    <div className="py-5">
       <Container>
-        <Row className="justify-content-center">
-          <Col md={5} className="carengine_left">
+        <Row className="justify-content-center align-items-center">
+          <Col md={6} className="section-title text-lg-start">
             <p>
               AUTOGEN PLUS PROGRAM <br /> COVERAGE AND REQUIREMENT
             </p>
 
-            <h1>Program In-Scope Components</h1>
-            <h2>
+            <h2><span>Program In-Scope Components</span></h2>
+            <p>
               AutoGen PLUS is an extended warranty program that covers two key
               components of a car, car engine and car transmission.{" "}
-            </h2>
-            <Button className="getengine" variant="secondary">
+            </p>
+            <Button  variant="secondary">
               GET STARTED
             </Button>
           </Col>
-          <Col md={5}>
+          <Col md={6}>
             <Image src={Engine} fluid />
           </Col>
         </Row>
         <Row className="enginedrop">
-          <Col md={5}>
+          <Col md={6}>
             <h3>Car Engine</h3>
-            <Col md={9}>
               <p>
                 Program covers 21x parts of the car's engine component including
                 the commonly reported faulty oil pressure sensor.{" "}
               </p>
-            </Col>
             <Dropdown>
               <Dropdown.Toggle variant="success" id="dropdown-basic">
                 21x Car Engine Covered Parts
@@ -81,15 +79,13 @@ export const CarEngine = () => {
               </Dropdown.Menu>
             </Dropdown>
           </Col>
-          <Col md={5}>
+          <Col md={6}>
             <h3>Car Transmission</h3>
-            <Col md={9}>
               <p>
                 Program covers 9x parts of the car's transmission component
                 (commonly known as gearbox) including the commonly reported
                 faulty gear shaft.{" "}
               </p>
-            </Col>
             <Dropdown>
               <Dropdown.Toggle variant="success" id="dropdown-basic">
                 9x Car Transmission Covered Parts

@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "./../assets/img/eautogen_white.svg";
+import Logo_mobile from "./../assets/img/header_bg.png";
 import { useMutation } from "@apollo/client";
 import { SIGNUP } from "./../mutations/userMutations";
 import { useForm } from "../utils/hooks";
 import { ToastContainer, toast } from "react-toastify";
-import { useQuery } from "@apollo/react-hooks";
-import values_that_lead_us from "./../assets/img/values_that_lead_us.png";
 import "react-toastify/dist/ReactToastify.css";
 function Signup() {
   const [errors, setErrors] = useState({});
@@ -72,9 +71,9 @@ function Signup() {
     <>
       <ToastContainer />
       <section className="authentication">
-        <Container fluid className="ps-0">
+        <Container fluid className="ps-lg-0">
           <Row className="align-items-center">
-            <Col md={6}>
+            <Col lg={6} className="d-none d-xl-block">
               <div className="authentication-content">
                 <div className="logo">
                   <Image src={Logo} />
@@ -93,9 +92,10 @@ function Signup() {
                 </Row>
               </div>
             </Col>
-            <Col md={6} >
+            <Col lg={6} >
               <div className="authentication-box h-auto">
                 <div className="authentication-inputs mb-0">
+                <Image src={Logo_mobile} className="d-block d-xl-none mobile-logo" fluid/>
                   <h1>Sign Up</h1>
                   <p>Fill up your personal information with AUTOGEN.</p>
 

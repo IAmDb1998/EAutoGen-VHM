@@ -6,11 +6,12 @@ import "./LandingFaq.css";
 
 export const LandingFaq = () => {
   return (
-    <div style={{ marginTop: "100px" }}>
+    <div className="py-5">
       <Container>
         <Row className="justify-content-center">
-          <Col md={6}>
-            <h1 style={{paddingBottom:"20px"}}>Frequently Asked Questions</h1>
+        <Col md={6} className="section-title">
+            
+            <h2><span>Frequently Asked Questions</span> </h2>
           </Col>
         </Row>
 
