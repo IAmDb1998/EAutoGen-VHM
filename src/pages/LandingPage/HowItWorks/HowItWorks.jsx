@@ -11,7 +11,7 @@ function HowItWorks() {
     <>
       <section className="py-5 how_work">
         <Container>
-          <Row>
+          <Row style={{marginBottom:"100px"}}>
             <Col md={12}>
               <div className="section-title">
                 <span>HOW IT WORKS</span>
@@ -63,6 +63,7 @@ function HowItWorks() {
               <a
                 className=" text-center m-auto"
                 style={{ textDecoration: "none" }}
+                href="https://pgmall.my/s/IMA2/3033"
               >
                 <Button variant="secondary">GET STARTED</Button>
               </a>

@@ -12,12 +12,13 @@
    
 }
 .brandslider_right span{
-   
+   font-weight: bold;
     color:#32bec0
     
 }
 .brandcarausal{
-   
+    justify-content: center;
+     text-align: center;
     margin:25px
 }
 .brandcarausal p{

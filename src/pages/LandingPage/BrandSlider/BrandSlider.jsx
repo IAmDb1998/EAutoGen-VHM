@@ -12,7 +12,7 @@ export const BrandSlider = () => {
       <Container>
         <Row  className="justify-content-center align-items-center" >
           <Col lg={6} className="section-title text-lg-start">
-            <p>AUTOGEN PLUS program ELIGIBILITY</p>
+            <p>AUTOGEN PLUS PROGRAM ELIGIBILITY</p>
             <Col md={10}>
             <h2><span>AutoGen PLUS Extended Warranty Program</span></h2>
             </Col>
@@ -27,6 +27,7 @@ export const BrandSlider = () => {
             </p>
           </Col>
         </Row>
+        <Container>
         <Row className="justify-content-center">
           <Col md={10} className="brandcarausal">
           <Carousel>
@@ -55,11 +56,13 @@ export const BrandSlider = () => {
               <a
                 className=" text-center m-auto"
                 style={{ textDecoration: "none" }}
+                href="https://pgmall.my/s/IMA2/3033"
               >
                 <Button className="getstarted" variant="secondary">GET STARTED</Button>
               </a>
             </Col>
         </Row>
+      </Container>
       </Container>
     </div>
   );

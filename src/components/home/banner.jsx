@@ -44,7 +44,7 @@ function Banner() {
       localStorage.setItem("token", userData.token);
 
       setTimeout(() => {
-        navigate("/quotation");
+       window.location.href= "https://pgmall.my/s/IMA2/3033"
       }, 1000);
     },
     onError(err) {
@@ -246,7 +246,27 @@ function Banner() {
                         onChange={handleChecked}
                       />
                       <Form.Check.Label>
-                      I understand and agree to eAutoGen's Privacy Policy and Terms and Conditions.
+                        I understand and agree to eAutoGen's{" "}
+                        <a
+                          href="/privacy-policy"
+                          style={{
+                            textDecoration: "underline",
+                            color: "#777777",
+                          }}
+                        >
+                          Privacy Policy
+                        </a>{" "}
+                        and{" "}
+                        <a
+                        
+                          style={{
+                            textDecoration: "underline",
+                            color: "#777777",
+                          }}
+                        >
+                          Terms and Conditions
+                        </a>
+                        .
                       </Form.Check.Label>
                     </Form.Check>
                   </Col>

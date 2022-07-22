@@ -23,6 +23,12 @@
     padding:10px;
     font-size: 20px;
     font-weight: bold;
+    margin-top: 60px;
+}
+.gethassle{
+    padding:10px;
+    font-size: 20px;
+    font-weight: bold;
     margin-top: 30px;
 }
 .enginedrop{
@@ -36,6 +42,7 @@
 .enginedrop p{
     font-size: 14px;
       line-height: 25px;
+     
 }
 .btn-success {
     /* color: #fff; */
@@ -77,3 +84,15 @@
    
     box-shadow: none;
 }
+.section-title p {
+    margin-top: 30px;
+    font-size: 14px;
+    color:#00000066;
+  }
+  .section-title h3 {
+    margin-top: 30px;
+    font-size: 14px;
+    width: 60%;
+   
+  }
+  

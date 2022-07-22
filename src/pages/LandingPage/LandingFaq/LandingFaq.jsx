@@ -9,9 +9,9 @@ export const LandingFaq = () => {
     <div className="py-5">
       <Container>
         <Row className="justify-content-center">
-        <Col md={6} className="section-title">
+        <Col md={9} style={{marginBottom:"28px"}} className="section-title">
             
-            <h2><span>Frequently Asked Questions</span> </h2>
+            <h2><span >Frequently Asked Questions</span> </h2>
           </Col>
         </Row>
 
@@ -145,7 +145,14 @@ export const LandingFaq = () => {
             </Accordion>
           </Col>
         </Row>
+        <Row className="justify-content-center">
+        <Col md={9} style={{marginBottom:"28px"}} className="section-title">
+            
+            <h2><span style={{textDecoration:"underline",color:"#29BEBA",fontSize:"14px"}} >See all FAQs here</span> </h2>
+          </Col>
+        </Row>
       </Container>
+      
     </div>
   );
 };

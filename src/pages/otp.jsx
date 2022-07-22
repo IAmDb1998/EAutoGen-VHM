@@ -67,7 +67,7 @@ function OTP() {
               </Row>
             </div>
           </Col>
-          <Col lg={6} >
+          <Col md={6} >
             <div className="authentication-box_otp">
               <div className="authentication-inputs">
               <Image src={Logo_mobile} className="d-block d-xl-none mobile-logo" fluid/>
@@ -113,8 +113,9 @@ function OTP() {
                 </p>
               </div>
 
-              <Image src={values_that_lead_us} fluid className="d-none d-xl-block" />
+             
             </div>
+            <Image src={values_that_lead_us} fluid className="d-none d-xl-block d-flex m-auto" width='250px' height='250px'/>
           </Col>
         </Row>
       </Container>

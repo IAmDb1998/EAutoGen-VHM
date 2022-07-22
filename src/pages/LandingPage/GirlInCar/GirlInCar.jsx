@@ -11,9 +11,9 @@ export const GirlInCar = () => {
           <Col md={6} className="section-title text-lg-end">
           <span>AUTOGEN PLUS PROGRAM <br/>COVERAGE AND REQUIREMENT</span>
           <h2><span>Repair Value On In-Scope Components</span></h2>
-            <p className="pb-lg-5">Cushioning you financially for unwanted surprises.</p>
-            <Button className="getstarted" variant="secondary">GET STARTED</Button>
-            <p>See all eAutoGen's panel workshops.</p>
+            <p className="pb-lg-5" style={{color:"black"}}>Cushioning you financially for unwanted surprises.</p>
+            <Button className="getstarted" variant="secondary" onClick={()=>window.location.href="https://pgmall.my/s/IMA2/3033"}>GET STARTED</Button>
+            <p style={{color:"#29989a",textDecoration:"underline"}}>See all eAutoGen's panel workshops.</p>
           </Col>
         </Row>
 

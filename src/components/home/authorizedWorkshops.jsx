@@ -18,7 +18,7 @@ import ArrowBackIosRoundedIcon from "@material-ui/icons/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@material-ui/icons/ArrowForwardIosRounded";
 
 function AuthorizedWorkshops() {
-  const [stateValue, setStateValue] = useState("");
+  const [stateValue, setStateValue] = useState("62d134e6f13bf1bf557aa7d8");
   function onChange(e) {
     setStateValue(e.target.value);
   }
@@ -27,6 +27,7 @@ function AuthorizedWorkshops() {
   var { data } = useQuery(GETALLSTATES);
   const State = data?.getAllState?.allStateRes;
   const stateId = localStorage.getItem("stateId");
+  console.log(stateId);
   var { data } = useQuery(GETAllWORKSHOPS, { variables: { stateId } });
   const workshops = data?.getWorkshopById?.allWorkshopRes;
   console.log("valueeee", workshops);
@@ -89,7 +90,7 @@ function AuthorizedWorkshops() {
                   aria-label="Default select example"
                   onChange={onChange}
                 >
-                  <option>Filter by State</option>
+                  <option>Kuala Lumpur</option>
                   {State?.map((option, index) => (
                     <option key={index} value={option.id}>
                       {option.name}

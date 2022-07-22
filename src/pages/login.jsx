@@ -70,7 +70,7 @@ function Login() {
           <Col lg={6}  >
             <div className="authentication-box">
               <div className="authentication-inputs">
-                <Image src={Logo_mobile} className="d-block d-xl-none mobile-logo" fluid/>
+              <Image src={Logo_mobile} className="d-block d-xl-none mobile-logo" fluid/>
                 <h1>Welcome to eAutoGen Capital</h1>
                 <p>Login with your email to get started.</p>
                 <Form noValidate validated={validated} onSubmit={onSubmit}>
@@ -100,7 +100,7 @@ function Login() {
                   Don’t have an account?<Link to="/signup"> Sign Up</Link>
                 </p>
               </div>
-              <Image src={values_that_lead_us} fluid className="d-none d-xl-block" />
+              <Image src={values_that_lead_us} fluid className="d-none d-xl-block mobile_img" width="250px" height="250px"/>
             </div>
           </Col>
         </Row>

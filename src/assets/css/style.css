@@ -1,5 +1,5 @@
 header .navbar {
-    /* background-color: rgba(0, 0, 0, 0.2); */
+  /* background-color: rgba(0, 0, 0, 0.2); */
 }
 .desk_logo {
   display: none;
@@ -8,7 +8,7 @@ header .navbar {
   display: none;
 }
 header .navbar-brand img {
-  height: 40px;
+  height: 80px;
 }
 .privacy-policy h2 {
   font-size: 24px;
@@ -16,7 +16,6 @@ header .navbar-brand img {
 }
 .privacy-policy p {
   font-size: 16px;
-  
 }
 header .navbar-light .navbar-nav .nav-link {
   font-weight: 700;
@@ -69,8 +68,8 @@ header .login a {
   list-style-type: none;
   font-weight: 700;
 }
-.banner_form{
-  border:"1px solid red";
+.banner_form {
+  border: "1px solid red";
 }
 .banner .banner-content p {
   font-size: 18.6578px;
@@ -217,7 +216,7 @@ header .login a {
   position: relative;
   z-index: 1;
   margin: 20px;
-  height: 550px;
+  height: 450px;
   background-color: #fff;
   padding: 10px;
   /* padding-bottom: 45px; */
@@ -259,12 +258,24 @@ footer ul li a.nav-link {
   color: #fff;
   text-decoration: none;
   font-size: 14px;
+  opacity: 100%;
+}
+footer ul li a.nav-link strong {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 100%;
 }
 footer .footer-bottom {
   border-top: 1px solid #fff;
   padding: 15px 0;
   text-align: center;
   display: flex;
+}
+.footer-bottom p {
+  font-size: 10px;
+  color: #fff;
+  font-weight: bold;
 }
 footer .footer-bottom p {
   margin: 0 auto;
@@ -313,7 +324,7 @@ footer .footer-bottom p {
 }
 .authentication-content {
   background-image: url(../img//banner_bg.png);
-  height: 100vh;
+  height: 130vh;
   width: 100%;
   background-size: cover;
   background-position: right;
@@ -338,6 +349,7 @@ footer .footer-bottom p {
   position: absolute;
   top: 80px;
 }
+
 .authentication-box {
   max-width: 855px;
   display: block;
@@ -353,15 +365,13 @@ footer .footer-bottom p {
   display: block;
   margin: 0 auto;
   position: relative;
-  
+
   display: flex;
   align-items: center;
-  margin-top: -190px;
 }
 .authentication-box_otp .authentication-inputs {
   width: 100%;
   margin-bottom: 15%;
-  
 }
 .authentication-box_otp h1 {
   font-size: 24px;
@@ -375,11 +385,6 @@ footer .footer-bottom p {
 .authentication-box_otp img {
   max-width: 370px;
   margin: 0 auto;
-  position: absolute;
-  bottom: -250px;
-  left: 0;
-  right: 0;
-  
 }
 .authentication-box .authentication-inputs {
   width: 100%;
@@ -397,10 +402,6 @@ footer .footer-bottom p {
 .authentication-box img {
   max-width: 370px;
   margin: 0 auto;
-  position: absolute;
-  bottom: -5%;
-  left: 0;
-  right: 0;
 }
 .btn-secondary {
   background-color: #32bec0;
@@ -423,30 +424,29 @@ footer .footer-bottom p {
   display: none;
 }
 
-.banner_form{
- 
-  padding:20px;
-  position:absolute;
-  bottom:-150px;
-  background-color: #F4F6F6;
+.banner_form {
+  padding: 20px;
+  position: absolute;
+  bottom: -150px;
+  background-color: #f4f6f6;
 }
-.btn-outline-secondary:hover{
+.btn-outline-secondary:hover {
   background-color: #29989a;
   border-color: #29989a;
 }
-.btn{
+.btn {
   transition: all 0.5s;
 }
-.btn-danger{
-  background-color: #DF5C5C;
-  border-color: #DF5C5C;
+.btn-danger {
+  background-color: #df5c5c;
+  border-color: #df5c5c;
 }
-.btn-danger:hover{
+.btn-danger:hover {
   background-color: #c33737;
   border-color: #c33737;
 }
-.text-danger{
-  color: #DF5C5C;
+.text-danger {
+  color: #df5c5c;
 }
 .hero-bg {
   background-image: url(../img/herobg.png);
@@ -456,16 +456,30 @@ footer .footer-bottom p {
   position: relative;
   margin: 0 auto;
   height: 100vh;
-  max-height: 768px;
+  max-width: 1600px;
+  max-height: 700px;
   display: flex;
   background-position: center;
   align-items: center;
 }
-
-.hiw_img{
+.mobile_bg{
+  background-image: url(../img/mobilecarview.png);
+  /* height: 100vh; */
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  margin: 0 auto;
+  height: 100vh;
+  max-width: 1600px;
+  max-height: 700px;
+  background: none;
+  background-position: center;
+  align-items: center;
+}
+.hiw_img {
   max-width: 96px;
   display: flex;
-    margin: 0 auto;
+  margin: 0 auto;
 }
 /* mobile view */
 
@@ -477,6 +491,9 @@ footer .footer-bottom p {
   .banner .banner-content h1 {
     font-size: 40px;
     line-height: 40px;
+  }
+  .mobile_bg{
+    display: none;
   }
 }
 @media screen and (min-device-width: 540px) and (max-device-width: 720px) {
@@ -579,13 +596,16 @@ footer .footer-bottom p {
   .autogen .icon-box {
     display: grid;
   }
-  .banner_form{
+  .banner_form {
     position: relative;
     bottom: 0;
     top: -85px;
   }
-  .how_work{
+  .how_work {
     margin-top: 0;
+  }
+  .mobile_bg{
+    display: none;
   }
 }
 
@@ -640,6 +660,7 @@ footer .footer-bottom p {
     font-size: 30px;
     text-align: center;
   }
+
   .section-title h2 span {
     font-size: 26px;
     text-align: center;
@@ -648,11 +669,9 @@ footer .footer-bottom p {
     display: none;
   }
   .hiw_img {
-    
     margin: auto;
     justify-content: center;
     display: flex;
-   
   }
 
   .how_work strong {
@@ -685,41 +704,46 @@ footer .footer-bottom p {
   .autogen .icon-box {
     display: grid;
   }
-  .autogen .icon-box .icon-content{
+  .autogen .icon-box .icon-content {
     padding-left: 10px;
   }
-  .include_auto{
+  .include_auto {
     width: 85%;
     margin: 0 auto;
   }
 
-
   /* login */
-.btn-secondary{
-    background-color: #32BEC0;
-    border-color: #32BEC0;
+  .btn-secondary {
+    background-color: #32bec0;
+    border-color: #32bec0;
     text-transform: uppercase;
-}
+  }
 
-.btn-secondary:hover{
+  .btn-secondary:hover {
     background-color: #29989a;
     border-color: #29989a;
+  }
+  .banner_form {
+    position: relative;
+    bottom: 0;
+    top: -85px;
+  }
+  .how_work {
+    margin-top: 0;
+  }
+  .mobile_bg{
+    background: url(../img//mobilecarview.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .hero_img{
+    padding-top: 15px;
+  }
+  .herodesk{
+    padding-bottom: 500px;
+  }
+    
+  .hero-bg{
+   background: none;
+  }
 }
-.hero-bg{
-  max-height: 320px;
-}
-.banner_form{
-  position: relative;
-  bottom: 0;
-  top: -85px;
-}
-.how_work{
-  margin-top: 0;
-}
-.hero-bg img{
-  max-width: 115px;
-}
-}
-
-
-

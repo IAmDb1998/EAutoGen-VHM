@@ -7,23 +7,23 @@ export const CarEngine = () => {
   return (
     <div className="py-5">
       <Container>
-        <Row className="justify-content-center align-items-center">
+        <Row className="justify-content-center ">
           <Col md={6} className="section-title text-lg-start">
             <p>
               AUTOGEN PLUS PROGRAM <br /> COVERAGE AND REQUIREMENT
             </p>
 
             <h2><span>Program In-Scope Components</span></h2>
-            <p>
-              AutoGen PLUS is an extended warranty program that covers two key
-              components of a car, car engine and car transmission.{" "}
-            </p>
-            <Button  variant="secondary">
+            <h3>
+            AutoGen PLUS covers two key components of a car <br/>
+            - the engine and  transmission. 
+            </h3>
+            <Button className="getengine" variant="secondary" onClick={()=>window.location.href="https://pgmall.my/s/IMA2/3033"}>
               GET STARTED
             </Button>
           </Col>
           <Col md={6}>
-            <Image src={Engine} fluid />
+            <Image src={Engine} fluid width="500px" height="500px"/>
           </Col>
         </Row>
         <Row className="enginedrop">
@@ -70,6 +70,8 @@ export const CarEngine = () => {
                   Air Mass Sensor (Air Flow Sensor) &nbsp; &nbsp; &nbsp; &nbsp;
                   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp;
                 </Dropdown.Item>
                 <Dropdown.Item href="#/action-1">
                   Engine Vacuum Pump
@@ -95,6 +97,8 @@ export const CarEngine = () => {
                 <Dropdown.Item href="#/action-1">
                   (Automatic or Manual) Clutch Temperature Sensor &nbsp; &nbsp;
                   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; 
                 </Dropdown.Item>
                 <Dropdown.Item href="#/action-1">
                   Transmission Control Module TCM

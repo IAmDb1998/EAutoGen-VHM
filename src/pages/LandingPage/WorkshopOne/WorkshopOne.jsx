@@ -4,7 +4,7 @@ import AuthorizedWorkshops from "../../../components/home/authorizedWorkshops";
 import "./WorkshopOne.css";
 export const WorkshopOne = () => {
   return (
-    <div style={{ background:"#F4F6F6",}} className="py-5">
+    <div style={{ background:"#F4F6F6",marginTop:"50px"}} className="py-5">
       <Container>
         <Row className="workshopone">
           <Col md={6}>
@@ -17,7 +17,7 @@ export const WorkshopOne = () => {
 
           </Col>
           <Col md={6} className="section-title text-lg-end">
-            <span>EAUTOZEN'S AUTHORISED PARTNERS</span>
+            <span>EAUTOGEN'S AUTHORISED PARTNERS</span>
             <h2><span>Locate Your Preferred Program Activation Point</span></h2>
           </Col>
          
